@@ -4,22 +4,7 @@
 <head>
     <meta charset="utf-8">
     <link href="css/index.css" rel="stylesheet" type="text/css">
-    <script type="text/javascript">
-        window.onload = function () {
-            var likeChange = document.getElementsByClassName("likeChange");
-            for (var i = 0; i < likeChange.length; i++) {
-                likeChange[i].onclick = function () {
-                    var reg = new RegExp("like.svg");
-                    if (reg.test(this.src)) {
-                        this.src = "Images\\index\\uC-bottomicon\\like(red).svg";
-                    }
-                    else {
-                        this.src = "Images\\index\\uC-bottomicon\\like.svg";
-                    }
-                }
-            }
-        }
-    </script>
+    <script src="JavaScript\index.js" type="text/javascript"></script>
     <title>LOFTER（乐乎）- 让兴趣，更有趣</title>
 </head>
 
