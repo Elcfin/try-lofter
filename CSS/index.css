@@ -285,6 +285,10 @@ body {
     font-size: 13px;
 }
 
+.dock li a:hover {
+    filter: brightness(70%);
+}
+
 .dock li a img:hover {
     filter: brightness(70%);
 }
