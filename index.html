@@ -4,6 +4,22 @@
 <head>
     <meta charset="utf-8">
     <link href="css/index.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript">
+        window.onload = function () {
+            var likeChange = document.getElementsByClassName("likeChange");
+            for (var i = 0; i < likeChange.length; i++) {
+                likeChange[i].onclick = function () {
+                    var reg = new RegExp("like.svg");
+                    if (reg.test(this.src)) {
+                        this.src = "Images\\index\\uC-bottomicon\\like(red).svg";
+                    }
+                    else {
+                        this.src = "Images\\index\\uC-bottomicon\\like.svg";
+                    }
+                }
+            }
+        }
+    </script>
     <title>LOFTER（乐乎）- 让兴趣，更有趣</title>
 </head>
 
@@ -15,10 +31,11 @@
         <div id="topBar">
             <div id="topBarl">
                 <div id="topBarll">
-                    <div id="logo">
+                    <!--<a href="https://www.lofter.com/" id="logo">-->
+                    <a href="#" id="logo">
                         <img src="Images\index\other\lofter.svg">
                         <div id="lofter">LOFTER</div>
-                    </div>
+                    </a>
                     <div id="barIcons">
                         <div class="barIcon">
                             <a href="#">首页</a>
@@ -61,33 +78,42 @@
             <!--mainBody中几乎每个div都有阴影效果-->
             <div id="mB-l">
                 <div id="publishBar">
-                    <div id="profilePhoto"><img src="Images\index\other\dragon.jpg"></div>
+                    <a href="#" id="profilePhoto"><img src="Images\index\other\dragon.jpg"></a>
                     <div id="icons">
-                        <div class="icon"><img src="Images\index\baricon\character.svg">
+                        <a href="#" class="icon" id="icon1">
+                            <img src="Images\index\baricon\character.svg">
                             <div class="c">文字</div>
-                        </div>
-                        <div class="icon"><img src="Images\index\baricon\photo.svg">
+                        </a>
+                        <a href="#" class="icon" id="icon2">
+                            <img src="Images\index\baricon\photo.svg">
                             <div class="c">图片</div>
-                        </div>
-                        <div class="icon"><img src="Images\index\baricon\music.svg">
+                        </a>
+                        <a href="#" class="icon" id="icon3">
+                            <img src="Images\index\baricon\music.svg">
                             <div class="c">音乐</div>
-                        </div>
-                        <div class="icon"><img src="Images\index\baricon\video.svg">
+                        </a>
+                        <a href="#" class="icon" id="icon4">
+                            <img src="Images\index\baricon\video.svg">
                             <div class="c">视频</div>
-                        </div>
-                        <div class="icon"><img src="Images\index\baricon\article.svg">
+                        </a>
+                        <a href="#" class="icon" id="icon5">
+                            <img src="Images\index\baricon\article.svg">
                             <div class="c">长文章</div>
-                        </div>
+                        </a>
                     </div>
                 </div>
                 <!--publishBar结束-->
                 <div class="list">
                     <div class="user">
-                        <img src="Images\index\user\leaf.jpg">
+                        <a href="#">
+                            <img src="Images\index\user\leaf.jpg">
+                        </a>
                     </div>
                     <div class="Triangle"></div>
                     <div class="userContent">
-                        <div class="uC-name">秦三见</div>
+                        <div class="uC-name">
+                            <a href="#">秦三见</a>
+                        </div>
                         <!--文章有标题则显示，没有标题则不占位-->
                         <div class="uC-title"></div>
                         <div class="uC-content">
@@ -95,22 +121,25 @@
                         </div>
                         <div class="uC-bottom">
                             <div class="uCb-tag">
-
                                 <ul class="dock">
                                     <li style="padding-right: 6px;">
                                         <img src="Images\index\uC-bottomicon\tag.svg">
                                     </li>
-                                    <li>原创</li>
-                                    <li>插画</li>
+                                    <li><a href="#">原创</a></li>
+                                    <li><a href="#">插画</a></li>
                                 </ul>
                             </div>
                             <div class="uCb-like">
                                 <ul class="dock">
-                                    <li>热度（）</li>
-                                    <li>评论（）</li>
-                                    <li>分享</li>
-                                    <li>推荐</li>
-                                    <li style="padding-right: 0px;"><img src="Images\index\uC-bottomicon\like.svg"></li>
+                                    <li><a href="#">热度（）</a></li>
+                                    <li><a href="#">评论（）</a></li>
+                                    <li><a href="#">分享</a></li>
+                                    <li><a href="#">推荐</a></li>
+                                    <li style="padding-right: 0px;">
+                                        <a href="#">
+                                            <img class="likeChange" src="Images\index\uC-bottomicon\like.svg">
+                                        </a>
+                                    </li>
                                 </ul>
                             </div>
                         </div>
@@ -123,19 +152,69 @@
                 <div id="menue">
                     <div id="aboutMe" class="side">
                         <div id="aM-top">
-                            <div id="aM-topl"></div>
-                            <div id="aM-topr"></div>
+                            <a href="#" id="aM-topl">
+                                <div id="aMt-c">
+                                    <strong>Elcfin</strong><br />
+                                    miaowu
+                                </div>
+                            </a>
+                            <a href="#" id="aM-topr"><img src="Images\index\menu\triangle.svg"></a>
                         </div>
                         <div id="aM-bottom">
-                            <div id="aM-bottomFocus"></div>
-                            <div id="aM-bottomFans"></div>
+                            <a href="#" id="aM-bottomFocus">
+                                <div class="character">关注</div>
+                                <div class="number">78</div>
+                            </a>
+                            <a href="#" id="aM-bottomFans">
+                                <div class="character">粉丝</div>
+                                <div class="number">2</div>
+                            </a>
                         </div>
                     </div>
-                    <div id="info" class="side"></div>
+                    <div id="info" class="side">
+                        <div id="info-top">
+                            <a href="#" id="originatorCenter">
+                                <div id="originatorCenterc">创作者中心</div>
+                                <img src="Images\index\menu\rightArrow.svg">
+                            </a>
+                            <a href="#" class="infoClassify">
+                                <img src="Images\index\menu\article.svg">
+                                <div class="infoClassifyc">文章</div>
+                            </a>
+                            <a href="#" class="infoClassify">
+                                <img src="Images\index\menu\collection.svg">
+                                <div class="infoClassifyc">合集</div>
+                            </a>
+                            <a href="#" class="infoClassify">
+                                <img src="Images\index\menu\like.svg">
+                                <div class="infoClassifyc">喜欢</div>
+                            </a>
+                            <a href="#" class="infoClassify">
+                                <img src="Images\index\menu\walletPurse.svg">
+                                <div class="infoClassifyc">钱包</div>
+                            </a>
+                            <a href="#" class="infoClassify">
+                                <img src="Images\index\menu\draft.svg">
+                                <div class="infoClassifyc">草稿</div>
+                            </a>
+                        </div>
+                        <div id="info-bottom">
+                            <a href="#" class="infoSet">
+                                <img src="Images\index\menu\wrench.svg">
+                                <div class="infoSetc">
+                                    个人主页设置
+                                </div>
+                            </a>
+                            <a href="#" class="infoSet">
+                                <img src="Images\index\menu\management.svg">
+                                <div class="infoSetc">
+                                    批量管理文章</div>
+                            </a>
+                        </div>
+                    </div>
                 </div>
                 <div id="plan" class="side"></div>
                 <div id="origin" class="side"></div>
-                <div id="topic" class="side"></div>
                 <div id="withPhone" class="side"></div>
                 <!--当x方向滚动条滚至右侧无内容时，menue出现并保持吸顶（待实现）-->
             </div>
