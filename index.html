@@ -4,7 +4,9 @@
 <head>
     <meta charset="utf-8">
     <link href="css/index.css" rel="stylesheet" type="text/css">
-    <script src="JavaScript\index.js" type="text/javascript"></script>
+    <script src="JavaScript\index.js" type="text/javascript">
+
+    </script>
     <title>LOFTER（乐乎）- 让兴趣，更有趣</title>
 </head>
 
@@ -35,8 +37,7 @@
                     <!--选中搜索框时new标号消失（待实现）-->
                     <div id="search">
                         <!--<img src="放大镜图片地址">-->
-                        <!--这样处理，点击搜索框时，光标仍会出现在搜索框最前端-->
-                        <input type="text" placeholder="   搜索用户、标签">
+                        <input type="text" placeholder="搜索用户、标签">
                     </div>
                 </div>
             </div>
@@ -95,43 +96,68 @@
                         </a>
                     </div>
                     <div class="Triangle"></div>
-                    <div class="userContent">
-                        <div class="uC-name">
-                            <a href="#">秦三见</a>
-                        </div>
-                        <!--文章有标题则显示，没有标题则不占位-->
-                        <div class="uC-title"></div>
-                        <div class="uC-content">
-                            <p>“愿你的长夏永不凋零”</p>
-                        </div>
-                        <div class="uC-bottom">
-                            <div class="uCb-tag">
-                                <ul class="dock">
-                                    <li style="padding-right: 6px;">
-                                        <img src="Images\index\uC-bottomicon\tag.svg">
-                                    </li>
-                                    <li><a href="#">原创</a></li>
-                                    <li><a href="#">插画</a></li>
-                                </ul>
+                    <div class="userContentp">
+                        <div class="userContent">
+                            <div class="uC-name">
+                                <a href="#">秦三见</a>
                             </div>
-                            <div class="uCb-like">
-                                <ul class="dock">
-                                    <li><a href="#">热度（）</a></li>
-                                    <li><a href="#">评论（）</a></li>
-                                    <li><a href="#">分享</a></li>
-                                    <li><a href="#">推荐</a></li>
-                                    <li style="padding-right: 0px;">
-                                        <a href="#">
-                                            <img class="likeChange" src="Images\index\uC-bottomicon\like.svg">
-                                        </a>
-                                    </li>
-                                </ul>
+                            <!--文章有标题则显示，没有标题则不占位-->
+                            <div class="uC-title"></div>
+                            <div class="uC-content">
+                                <p>“愿你的长夏永不凋零”</p>
+                            </div>
+                            <div class="uC-bottom">
+                                <div class="uCb-tag">
+                                    <ul class="dock">
+                                        <li style="padding-right: 6px;">
+                                            <img src="Images\index\uC-bottomicon\tag.svg">
+                                        </li>
+                                        <li><a>原创</a></li>
+                                        <li><a>插画</a></li>
+                                    </ul>
+                                </div>
+                                <div class="uCb-like">
+                                    <ul class="dock">
+                                        <li><span>热度（）</a></li>
+                                        <li><span class="commentsChange">评论（）</span></li>
+                                        <li><span>分享</span></li>
+                                        <li><span>推荐</span></li>
+                                        <li style="padding-right: 0px;">
+                                            <span>
+                                                <img class="likeChange" src="Images\index\uC-bottomicon\like.svg">
+                                            </span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <!--uC-bottom结束-->
+                            <!--评论区-->
+                        </div>
+                        <div class="comments-inv">
+                            <div class="publish">
+                                <input type="text">
+                                <input type="submit" value="发布" />
+                            </div>
+                            <div class="comment">
+                                <div>
+                                    <div class="commentName">青桔</div>
+                                    <div class="commentContent">好看</div>
+                                </div>
+                                <div class="commentReply">回复</div>
+                            </div>
+                            <div class="comment">
+                                <div>
+                                    <div class="commentName">青桔猫</div>
+                                    <div class="commentContent">好看</div>
+                                </div>
+                                <div class="commentReply">回复</div>
                             </div>
                         </div>
-                        <!--uC-bottom结束-->
+
                     </div>
                 </div>
                 <!--一个list模块结束-->
+
             </div>
             <div id="mB-side">
                 <div id="menue">
