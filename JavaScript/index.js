@@ -32,12 +32,27 @@ window.onload = function () {
             if (commentsVorInV.className == "comments-v") {
                 commentsVorInV.className = "comments-inv";
             }
-            else {
+            else if(commentsVorInV.className == "comments-inv"){
                 commentsVorInV.className = "comments-v";
             }
         }
     }
     //评论展开与收起end
+
+    //图片的展开与收起start
+    var uCContent = document.getElementsByClassName("uC-content");
+    for (var i = 0; i < uCContent.length; i++) {
+        uCContent[i].onclick = function () {
+            var uCContentImgVorInV = this.childNodes[1];
+            if (uCContentImgVorInV.className == "uC-contentImgMax") {
+                uCContentImgVorInV.className = "uC-contentImgMin";
+            }
+            else if (uCContentImgVorInV.className == "uC-contentImgMin") {
+                uCContentImgVorInV.className = "uC-contentImgMax";
+            }
+        }
+    }
+    //图片的展开与收起end
 }
 
 /*      function SetCookie(sName, sValue) {
