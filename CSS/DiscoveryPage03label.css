@@ -170,79 +170,9 @@ body {
     flex-direction: column;
 }
 
-#topLabel {
+#mainBodyTop {
     margin: 30px;
-    height: 55px;
-}
-
-#labels {
-    margin: 0px;
-    display: grid;
-    grid-template-columns: repeat(6, 1fr);
-}
-
-.label {
-    margin: 2.5px 15px;
-    height: 36px;
-    width: 120px;
-    background-color: rgb(236, 236, 238);
-    text-align: center;
-}
-
-.labelContent {
-    color: rgb(85, 85, 85);
-    font-size: 17px;
-    font-weight: bold;
-    padding: 6.2px;
-    cursor: pointer;
-}
-
-#mainContent {
-    margin: 30px;
-    margin-top: 5px;
-    height: auto;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-}
-
-#mainContentLeft {
-    display: flex;
-    flex-direction: column;
-}
-
-#mainContentRight {
-    display: flex;
-    flex-direction: column;
-}
-
-.item {
-    margin: 10px 15px;
-    width: 418px;
-    height: auto;
-    border: 1px solid rgb(237, 237, 239);
-    display: flex;
-    flex-direction: column;
-}
-
-.itemTitle {
-    margin: 20px 19px 0px 19px;
-    width: 380px;
-    height: 30px;
-    font-weight: bold;
-    color: rgb(68, 68, 68)
-}
-
-.itemJoinNumber {
-    margin: 10px 19px 0px 19px;
-    width: 380px;
-    height: 20px;
-    font-size: 12px;
-    color: rgb(175, 175, 175)
-}
-
-.pictures {
-    margin: 20px 19px;
-    width: 380px;
+    width: 900px;
     height: auto;
     display: flex;
     flex-direction: row;
@@ -250,17 +180,82 @@ body {
     justify-content: space-between;
 }
 
-.picture {
-    display: inline-block;
-    width: 124.6px;
-    height: 124.6px;
-    border-bottom: 1px solid rgb(255, 255, 255);
-    border-left: 1px solid rgb(255, 255, 255);
-    border-right: 1px solid rgb(255, 255, 255);
+.topItem {
+    width: 170px;
+    height: 170px;
+    margin-bottom: 12px;
     background-color: rgb(175, 175, 175);
     cursor: pointer;
+    position: relative;
 }
 
-.picture:hover {
+.topItem:hover {
     filter: brightness(90%)
+}
+
+.topItemLabel {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    padding: 4px 6px;
+    width: auto;
+    height: 16px;
+    text-align: center;
+    line-height: 16px;
+    font-size: 15px;
+    letter-spacing: 1px;
+    background-color: rgb(7, 7, 7);
+    color: rgb(211, 211, 211);
+    border-radius: 3px;
+    opacity: 0.8;
+}
+
+#mainBodyRecommend {
+    width: 960px;
+    height: auto;
+}
+
+#recommendTop {
+    background-color: rgb(255, 255, 255);
+    font-size: 15px;
+    color: rgb(136, 136, 136);
+}
+
+#recommendTop div {
+    margin: auto;
+    margin-left: 30px;
+}
+
+#recommendTop,
+.recommendItem {
+    width: 960px;
+    height: 40px;
+    border-bottom: 2px groove;
+    border-color: rgb(255, 255, 255, 0.55);
+    display: grid;
+    grid-template-columns: 3fr 1fr 1fr 1fr;
+}
+
+.recommendItem:nth-child(odd) {
+    background-color: rgb(255, 255, 255);
+}
+
+.recommendItem:nth-child(even) {
+    background-color: rgb(245, 245, 245);
+}
+
+.recommendItem div {
+    margin: auto;
+    margin-left: 30px;
+}
+
+.recommendItemLabelName {
+    font-weight: bold;
+    font-size: 15px;
+    color: rgb(68, 68, 68);
+}
+
+.recommendItemUser {
+    font-size: 13px;
+    color: rgb(136, 136, 136);
 }

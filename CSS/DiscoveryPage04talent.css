@@ -166,101 +166,106 @@ body {
     height: auto;
     background-color: rgb(255, 255, 255);
     margin: 0 auto;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+}
+
+#mainBodyLeft {
+    width: 640px;
+    height: auto;
+    background-color: rgb(255, 255, 255);
     display: flex;
     flex-direction: column;
 }
 
-#topLabel {
-    margin: 30px;
-    height: 55px;
+#mainBodyLeftTop {
+    height: 90px;
+    background-color: rgb(255, 255, 255);
 }
 
-#labels {
-    margin: 0px;
+.mainBodyLeftContent {
+    height: auto;
+    background-color: rgb(255, 255, 255);
+    border-top: 3px groove;
+    border-color: rgb(255, 255, 255, 0.3);
+    display: flex;
+    flex-direction: column;
+}
+
+.mainBodyLeftContentUser {
+    height: 60px;
     display: grid;
-    grid-template-columns: repeat(6, 1fr);
+    grid-template-columns: 1.4fr 6fr 1fr 2fr;
+    margin-top: 35px;
+    margin-left: 40px;
 }
 
-.label {
-    margin: 2.5px 15px;
-    height: 36px;
-    width: 120px;
-    background-color: rgb(236, 236, 238);
-    text-align: center;
-}
-
-.labelContent {
-    color: rgb(85, 85, 85);
-    font-size: 17px;
-    font-weight: bold;
-    padding: 6.2px;
+.mainBodyLeftContentUser span {
     cursor: pointer;
 }
 
-#mainContent {
-    margin: 30px;
-    margin-top: 5px;
-    height: auto;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+.tContentUserPic img {
+    cursor: pointer;
+    width: 60px;
+    height: 60px;
+    display: block;
 }
 
-#mainContentLeft {
+.tContentUserName {
+    color: rgb(51, 51, 51);
+    font-size: 16px;
+}
+
+.tContentUserDislike {
+    color: rgb(201, 201, 201);
+    font-size: 13px;
+    padding-top: 9px;
+}
+
+.tContentUserFocus input[type=button] {
+    width: 80px;
+    height: 35px;
+    background-color: rgb(125, 166, 0);
+    color: white;
+    padding: auto;
+    font-size: 16px;
+    letter-spacing: 6px;
+    border: none;
+    border-radius: 2px;
+    cursor: pointer;
+    outline: none;
+}
+
+.mainBodyLeftContentArticles {
+    margin-left: 40px;
+    height: 180px;
+    margin-top: 20px;
+    margin-right: 36px;
     display: flex;
-    flex-direction: column;
-}
-
-#mainContentRight {
-    display: flex;
-    flex-direction: column;
-}
-
-.item {
-    margin: 10px 15px;
-    width: 418px;
-    height: auto;
-    border: 1px solid rgb(237, 237, 239);
-    display: flex;
-    flex-direction: column;
-}
-
-.itemTitle {
-    margin: 20px 19px 0px 19px;
-    width: 380px;
-    height: 30px;
-    font-weight: bold;
-    color: rgb(68, 68, 68)
-}
-
-.itemJoinNumber {
-    margin: 10px 19px 0px 19px;
-    width: 380px;
-    height: 20px;
-    font-size: 12px;
-    color: rgb(175, 175, 175)
-}
-
-.pictures {
-    margin: 20px 19px;
-    width: 380px;
-    height: auto;
-    display: flex;
-    flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
 }
 
-.picture {
-    display: inline-block;
-    width: 124.6px;
-    height: 124.6px;
-    border-bottom: 1px solid rgb(255, 255, 255);
-    border-left: 1px solid rgb(255, 255, 255);
-    border-right: 1px solid rgb(255, 255, 255);
-    background-color: rgb(175, 175, 175);
+.mainBodyLeftContentArticle {
+    width: 130px;
+    height: 130px;
+    background-color: rgb(136, 136, 136);
     cursor: pointer;
 }
 
-.picture:hover {
-    filter: brightness(90%)
+.mainBodyLeftContentArticle:hover {
+    filter: brightness(85%);
+}
+
+#mainBodyright {
+    width: 320px;
+    height: auto;
+    background-color: rgb(248, 248, 248);
+    display: flex;
+    flex-direction: column;
+}
+
+#mainBodyRightTop {
+    height: 90px;
+    background-color: rgb(255, 255, 255);
 }
