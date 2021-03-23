@@ -166,13 +166,11 @@ body {
     height: auto;
     background-color: rgb(255, 255, 255);
     margin: 0 auto;
-    display: flex;
-    flex-direction: column;
     box-shadow: 1px 1px 1px rgba(128, 128, 128, 0.2),
         -1px -1px 1px rgba(128, 128, 128, 0.2);
 }
 
-#mainBodyTop {
+#mainBodyContent {
     margin: 30px;
     width: 900px;
     height: auto;
@@ -182,82 +180,15 @@ body {
     justify-content: space-between;
 }
 
-.topItem {
-    width: 170px;
+.contentItem {
+    width: 290px;
     height: 170px;
-    margin-bottom: 12px;
+    margin-bottom: 14px;
     background-color: rgb(237, 237, 239);
     cursor: pointer;
     position: relative;
 }
 
-.topItem:hover {
-    filter: brightness(90%)
-}
-
-.topItemLabel {
-    position: absolute;
-    bottom: 10px;
-    left: 10px;
-    padding: 4px 6px;
-    width: auto;
-    height: 16px;
-    text-align: center;
-    line-height: 16px;
-    font-size: 15px;
-    letter-spacing: 1px;
-    background-color: rgb(7, 7, 7);
-    color: rgb(211, 211, 211);
-    border-radius: 3px;
-    opacity: 0.8;
-}
-
-#mainBodyRecommend {
-    width: 960px;
-    height: auto;
-}
-
-#recommendTop {
-    background-color: rgb(255, 255, 255);
-    font-size: 15px;
-    color: rgb(136, 136, 136);
-}
-
-#recommendTop div {
-    margin: auto;
-    margin-left: 30px;
-}
-
-#recommendTop,
-.recommendItem {
-    width: 960px;
-    height: 40px;
-    border-bottom: 2px groove;
-    border-color: rgb(255, 255, 255, 0.55);
-    display: grid;
-    grid-template-columns: 3fr 1fr 1fr 1fr;
-}
-
-.recommendItem:nth-child(odd) {
-    background-color: rgb(255, 255, 255);
-}
-
-.recommendItem:nth-child(even) {
-    background-color: rgb(245, 245, 245);
-}
-
-.recommendItem div {
-    margin: auto;
-    margin-left: 30px;
-}
-
-.recommendItemLabelName {
-    font-weight: bold;
-    font-size: 15px;
-    color: rgb(68, 68, 68);
-}
-
-.recommendItemUser {
-    font-size: 13px;
-    color: rgb(136, 136, 136);
+.contentItem:hover {
+    filter: brightness(95%)
 }
