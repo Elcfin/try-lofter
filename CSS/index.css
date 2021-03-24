@@ -866,3 +866,14 @@ body {
     transform: translate(0, -50%);
     color: #8a8a8a;
 }
+
+#bodyFooter {
+    height: 30px;
+    width: 100%;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    text-align: center;
+    line-height: 30px;
+    color: rgb(116, 128, 139);
+    font-size: 12px;
+}

@@ -261,3 +261,14 @@ body {
     font-size: 13px;
     color: rgb(136, 136, 136);
 }
+
+#bodyFooter {
+    height: 30px;
+    width: 100%;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    text-align: center;
+    line-height: 30px;
+    color: rgb(116, 128, 139);
+    font-size: 12px;
+}

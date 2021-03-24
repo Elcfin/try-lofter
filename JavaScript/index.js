@@ -170,7 +170,7 @@ window.onload = function () {
         let repeat = setInterval(backToTop, 1);
     }
     let backTopImg = document.getElementById("backTopImg");
-    let buttonApear = function () {
+    let buttonAppear = function () {
         let currentPosition = document.documentElement.scrollTop || document.body.scrollTop;
         if (currentPosition > 500) {
             backTop.style.opacity = 1;
@@ -180,8 +180,25 @@ window.onload = function () {
             backTopImg.style.opacity = 0;
         }
     }
-    let repeat = setInterval(buttonApear, 1);
+    setInterval(buttonAppear, 1);
     //回到顶部end
+
+    //右侧为空时，menue模块出现并保持吸顶start
+    let mBSide = document.getElementById("mB-side");
+    let menueAppear = function () {
+        let currentPosition = document.documentElement.scrollTop || document.body.scrollTop;
+        let menue = document.getElementById("menue");
+        let mBL = document.getElementById("mB-l");
+        if (mBSide.offsetHeight - currentPosition - 610 < 0) {
+            menue.style.position = "fixed";
+            menue.style.left = mBL.right + 20 + "px"; //获取实时左侧相对距离
+            menue.style.top = 94 + "px";
+        } else {
+            menue.style.position = "static";
+        }
+    }
+    setInterval(menueAppear, 1);
+    //右侧为空时，menue模块出现并保持吸顶end
 }
 /*      function SetCookie(sName, sValue) {
         date = new Date();
