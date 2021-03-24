@@ -18,109 +18,6 @@ body {
     z-Index: 20;
 }
 
-#hidePublish {
-    width: 670px;
-    margin: 10px auto;
-    margin-right: 20px;
-    min-height: 100px;
-    display: none;
-    grid-template-columns: 1fr 20px 6fr;
-    z-Index: 30;
-}
-
-#profilePhotoPublisher {
-    width: 60px;
-    height: 60px;
-    display: block;
-    margin-left: 1px;
-    box-shadow: 1.5px 2.5px 2px rgba(128, 128, 128, 0.2),
-        -1.5px -1px 2px rgba(128, 128, 128, 0.2);
-    /*background-color: rgb(255, 255, 255);*/
-}
-
-#profilePhotoPublisher img {
-    width: 60px;
-    height: 60px;
-    margin: auto;
-}
-
-#publishTriangle {
-    height: 0px;
-    width: 0px;
-    border: 10px solid transparent;
-    border-top-color: rgb(255, 255, 255);
-    border-right-color: rgb(255, 255, 255);
-}
-
-#hidePublisherContentp {
-    display: flex;
-    flex-direction: column;
-}
-
-#hidePublishContent {
-    display: flex;
-    flex-direction: column;
-    padding: 15px 30px;
-    background-color: rgb(255, 255, 255);
-    box-shadow: 1.5px 2.5px 2px rgba(128, 128, 128, 0.2);
-    z-index: 5;
-}
-
-#pb-name {
-    height: 30px;
-    margin-bottom: 8px;
-    text-align: left;
-    justify-content: center;
-    cursor: default;
-}
-
-#pb-name div {
-    text-decoration: none;
-    font-size: 16px;
-    color: #8a8a8a;
-}
-
-#pb-content {
-    width: 500px;
-    height: 300px;
-    border: 1.5px dashed rgb(223, 223, 223);
-    box-sizing: border-box;
-    margin-bottom: 20px;
-}
-
-#pb-contentArticle {
-    display: inline-block;
-    vertical-align: top;
-}
-
-#pb-content img {
-    cursor: pointer;
-}
-
-#pb-bottom {
-    font-size: 13px;
-    height: 30px;
-    color: #8a8a8a;
-    align-items: flex-end;
-    display: grid;
-    grid-template-columns: 3fr 1fr 1fr;
-    margin-bottom: 10px;
-}
-
-#pb-bottom input[type=button] {
-    width: 90px;
-    height: 35px;
-    background-color: rgb(125, 166, 0);
-    color: white;
-    padding: auto;
-    font-size: 16px;
-    letter-spacing: 6px;
-    border: none;
-    border-radius: 2px;
-    cursor: pointer;
-    outline: none;
-}
-
 #totalBody {
     display: flex;
     flex-direction: column;
@@ -132,7 +29,7 @@ body {
     height: 64px;
     margin-bottom: 30px;
     background-color: #1f1f1f;
-    z-index: 10;
+    z-index: 40;
     display: grid;
     grid-template-columns: 2fr 1fr;
 }
@@ -252,27 +149,151 @@ body {
     height: auto;
 }
 
+#hidePublish {
+    width: 670px;
+    height: 0px;
+    margin: 0px auto;
+    margin-right: 20px;
+    margin-bottom: 10px;
+    display: grid;
+    grid-template-columns: 1fr 20px 6fr;
+    opacity: 0;
+    z-index: 30;
+    transition: all 0.8s;
+}
+
+#profilePhotoPublisher {
+    width: 60px;
+    /*height: 60px;*/
+    height: 0px;
+    display: block;
+    margin-left: 1px;
+    box-shadow: 1.5px 2.5px 2px rgba(128, 128, 128, 0.8),
+        -1.5px -1px 2px rgba(128, 128, 128, 0.8);
+    transition: all 0.8s;
+    /*background-color: rgb(255, 255, 255);*/
+}
+
+#profilePhotoPublisherImg {
+    width: 60px;
+    height: 0px;
+    margin: auto;
+    transition: all 0.8s;
+}
+
+#publishTriangle {
+    height: 0px;
+    width: 0px;
+    border: 10px solid transparent;
+    border-top-color: rgb(255, 255, 255);
+    border-right-color: rgb(255, 255, 255);
+    opacity: 0;
+    transition: all 0.8s;
+}
+
+#hidePublisherContentp {
+    display: flex;
+    flex-direction: column;
+    transition: all 0.8s;
+}
+
+#hidePublishContent {
+    display: flex;
+    flex-direction: column;
+    padding: 15px 30px;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 1.5px 2.5px 2px rgba(128, 128, 128, 0.8);
+    z-index: 5;
+    opacity: 0;
+    transition: all 0.8s;
+}
+
+#pb-name {
+    /*height: 30px;*/
+    height: 12.5px;
+    margin-bottom: 8px;
+    text-align: left;
+    justify-content: center;
+    cursor: default;
+    transition: all 0.8s;
+}
+
+#pb-inname {
+    text-decoration: none;
+    font-size: 16px;
+    color: #8a8a8a;
+    /*opacity: 0;
+    transition: all 0.5;*/
+}
+
+#pb-content {
+    width: 500px;
+    /*height: 300px;*/
+    height: 0px;
+    border: 1.5px dashed rgb(223, 223, 223);
+    box-sizing: border-box;
+    /*opacity: 0;
+    transition: all 0.5;*/
+    margin-bottom: 20px;
+    transition: all 0.8s;
+}
+
+#pb-contentArticle {
+    display: inline-block;
+    vertical-align: top;
+}
+
+#pb-bottom {
+    font-size: 13px;
+    height: 30px;
+    color: #8a8a8a;
+    align-items: flex-end;
+    display: grid;
+    grid-template-columns: 3fr 1fr 1fr;
+    margin-bottom: 10px;
+}
+
+#pb-bottom input[type=button] {
+    width: 90px;
+    height: 35px;
+    background-color: rgb(125, 166, 0);
+    color: white;
+    padding: auto;
+    font-size: 16px;
+    letter-spacing: 6px;
+    border: none;
+    border-radius: 2px;
+    cursor: pointer;
+    outline: none;
+}
+
 #publishBar {
-    min-height: 114px;
+    height: 114px;
     width: 670px;
     margin: 0 auto;
     margin-right: 20px;
     margin-bottom: 10px;
     background-color: rgb(255, 255, 255);
     display: grid;
+    opacity: 1;
     grid-template-columns: 114px 5fr;
     box-shadow: 1.5px 2.5px 1px rgba(128, 128, 128, 0.2);
+    z-index: 35;
+    transition: all 0.8s;
 }
 
 #profilePhoto {
     display: block;
 }
 
-#profilePhoto img {
+#profilePhotoImg {
+    /*height: 114px;*/
     height: 114px;
     width: 114px;
     display: block;
     margin: auto;
+    opacity: 1;
+    transition: all 0.8s;
 }
 
 #icons {
@@ -285,24 +306,12 @@ body {
     cursor: pointer;
 }
 
-.icon-inv {
-    position: relative;
-}
-
-.icon img {
+.iconImg {
     width: 50px;
     display: block;
     margin: 30px auto;
     opacity: 1;
-    transition: opacity 0.3s;
-}
-
-.icon-inv img {
-    width: 50px;
-    display: block;
-    margin: 30px auto;
-    opacity: 0;
-    transition: opacity 0.3s;
+    transition: all 0.8s;
 }
 
 .icon img:hover {
@@ -316,17 +325,7 @@ body {
     transform: translate(-50%, -50%);
     color: #8a8a8a;
     opacity: 1;
-    transition: opacity 0.3s;
-}
-
-.icon-inv .c {
-    position: absolute;
-    top: 80%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: #8a8a8a;
-    opacity: 0;
-    transition: opacity 0.3s;
+    transition: all 0.8s;
 }
 
 .list {

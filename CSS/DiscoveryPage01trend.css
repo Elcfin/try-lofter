@@ -228,6 +228,7 @@ input[type=button] {
     display: block;
     width: 100%;
     height: auto;
+    cursor: pointer;
 }
 
 .itemContentArticle {
@@ -253,6 +254,7 @@ input[type=button] {
     margin: auto;
     margin-left: 15px;
     margin-right: 8px;
+    cursor: pointer;
 }
 
 .itemContentBottomLike {
