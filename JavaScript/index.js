@@ -129,6 +129,59 @@ window.onload = function () {
         //pbInname.style.opacity = 0;
     });
     //发布动态页收起end
+
+    //回到顶部start
+    /*let backTop = document.getElementById("backTop");
+    backTop.onclick = function () {
+        let gotoTop = function () {
+            let currentPosition = document.documentElement.scrollTop || document.body.scrollTop;
+            if (currentPosition > 5000) {
+                window.scrollTo(0, 0);
+            } else if (currentPosition > 150) {
+                currentPosition -= 10;
+                window.scrollTo(0, currentPosition);
+            } else if (currentPosition > 80) {
+                currentPosition -= 2;
+                window.scrollTo(0, currentPosition);
+            } else if (currentPosition > 0) {
+                currentPosition -= 1;
+                window.scrollTo(0, currentPosition);
+            } else {
+                window.scrollTo(0, 0);
+                clearInterval(repeat);
+                repeat = null;
+            }
+        }
+        let repeat = setInterval(gotoTop, 1);
+    }*/
+    let backTop = document.getElementById("backTop");
+    backTop.onclick = function () {
+        let backToTop = function () {
+            let currentPosition = document.documentElement.scrollTop || document.body.scrollTop;
+            currentPosition -= (currentPosition / 80);
+            if (currentPosition > 0) {
+                window.scrollTo(0, currentPosition);
+            } else {
+                window.scrollTo(0, 0);
+                clearInterval(repeat);
+                repeat = null;
+            }
+        }
+        let repeat = setInterval(backToTop, 1);
+    }
+    let backTopImg = document.getElementById("backTopImg");
+    let buttonApear = function () {
+        let currentPosition = document.documentElement.scrollTop || document.body.scrollTop;
+        if (currentPosition > 500) {
+            backTop.style.opacity = 1;
+            backTopImg.style.opacity = 1;
+        } else {
+            backTop.style.opacity = 0;
+            backTopImg.style.opacity = 0;
+        }
+    }
+    let repeat = setInterval(buttonApear, 1);
+    //回到顶部end
 }
 /*      function SetCookie(sName, sValue) {
         date = new Date();
