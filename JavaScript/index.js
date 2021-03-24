@@ -6,8 +6,7 @@ window.onload = function () {
             var reg = new RegExp("like.svg");
             if (reg.test(this.src)) {
                 this.src = "Images\\index\\uC-bottomicon\\like(red).svg";
-            }
-            else {
+            } else {
                 this.src = "Images\\index\\uC-bottomicon\\like.svg";
             }
         }
@@ -18,21 +17,18 @@ window.onload = function () {
     var commentsChange = document.getElementsByClassName("commentsChange");
     for (var i = 0; i < commentsChange.length; i++) {
         commentsChange[i].onclick = function () {
-            var commentsInV  = this.parentNode.parentNode.parentNode.parentNode.parentNode.parentNode.getElementsByClassName("comments-inv")[0];
-            var commentsV  = this.parentNode.parentNode.parentNode.parentNode.parentNode.parentNode.getElementsByClassName("comments-v")[0];
+            var commentsInV = this.parentNode.parentNode.parentNode.parentNode.parentNode.parentNode.getElementsByClassName("comments-inv")[0];
+            var commentsV = this.parentNode.parentNode.parentNode.parentNode.parentNode.parentNode.getElementsByClassName("comments-v")[0];
             var commentsVorInV;
-            if(commentsInV)
-            {
-                commentsVorInV=commentsInV;
-            }
-            else{
-                commentsVorInV=commentsV;
+            if (commentsInV) {
+                commentsVorInV = commentsInV;
+            } else {
+                commentsVorInV = commentsV;
             }
             //var commentsVorInV = comments.childNodes[1];
             if (commentsVorInV.className == "comments-v") {
                 commentsVorInV.className = "comments-inv";
-            }
-            else if(commentsVorInV.className == "comments-inv"){
+            } else if (commentsVorInV.className == "comments-inv") {
                 commentsVorInV.className = "comments-v";
             }
         }
@@ -46,8 +42,7 @@ window.onload = function () {
             var uCContentImgVorInV = this.childNodes[1];
             if (uCContentImgVorInV.className == "uC-contentImgMax") {
                 uCContentImgVorInV.className = "uC-contentImgMin";
-            }
-            else if (uCContentImgVorInV.className == "uC-contentImgMin") {
+            } else if (uCContentImgVorInV.className == "uC-contentImgMin") {
                 uCContentImgVorInV.className = "uC-contentImgMax";
             }
         }
@@ -55,10 +50,36 @@ window.onload = function () {
     //图片的展开与收起end
 
     //发布动态页展开start
-    
+    var hideGreyIcon = document.getElementsByClassName("icon");
+    for (var i = 0; i < hideGreyIcon.length; i++) {
+        hideGreyIcon[i].addEventListener("click", function () {
+            var hideGrey = document.getElementById("hideGrey");
+            var bodyHeight = document.body.scrollHeight; //获取页面全部高度
+            hideGrey.style.display = "block";
+            hideGrey.style.height = bodyHeight + "px";
+        });
+        hideGreyIcon[i].addEventListener("click", function () {
+            var hidePublish = document.getElementById("hidePublish");
+            hidePublish.style.display = "grid";
+        });
+        hideGreyIcon[i].addEventListener("click", function () {
+            var publishBar = document.getElementById("publishBar");
+            publishBar.style.display = "none";
+        });
+    }
+    var cancel = document.getElementById("cancel");
+    cancel.addEventListener("click", function () {
+        var hideGrey = document.getElementById("hideGrey");
+        var hidePublish = document.getElementById("hidePublish");
+        hideGrey.style.display = "none";
+        hidePublish.style.display = "none";
+        var publishBar = document.getElementById("publishBar");
+        publishBar.style.display = "grid";
+    });
     //发布动态页收起end
 }
-
+//发布动态页展开start
+//发布动态页收起end
 /*      function SetCookie(sName, sValue) {
         date = new Date();
         s = date.getDate();
