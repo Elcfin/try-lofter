@@ -53,6 +53,10 @@ window.onload = function () {
         }
     }
     //图片的展开与收起end
+
+    //发布动态页展开start
+    
+    //发布动态页收起end
 }
 
 /*      function SetCookie(sName, sValue) {

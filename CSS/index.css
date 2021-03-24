@@ -12,7 +12,6 @@ body {
     flex-direction: column;
 }
 
-
 #topBar {
     position: sticky;
     top: 0px;
@@ -169,24 +168,51 @@ body {
 
 .icon {
     position: relative;
+    cursor: pointer;
+}
+
+.icon-inv {
+    position: relative;
 }
 
 .icon img {
     width: 50px;
     display: block;
     margin: 30px auto;
+    opacity: 1;
+    transition: opacity 0.3s;
+}
+
+.icon-inv img {
+    width: 50px;
+    display: block;
+    margin: 30px auto;
+    opacity: 0;
+    transition: opacity 0.3s;
 }
 
 .icon img:hover {
     filter: brightness(60%);
 }
 
-.c {
+.icon .c {
     position: absolute;
     top: 80%;
     left: 50%;
     transform: translate(-50%, -50%);
     color: #8a8a8a;
+    opacity: 1;
+    transition: opacity 0.3s;
+}
+
+.icon-inv .c {
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #8a8a8a;
+    opacity: 0;
+    transition: opacity 0.3s;
 }
 
 .list {
