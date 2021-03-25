@@ -20,7 +20,7 @@ body {
 
 .topBarIcon {
     float: right;
-    background-color: rgba(29, 29, 29, 0.6);
+    background-color: rgba(29, 29, 29, 0.7);
     height: 24px;
     font-size: 13px;
     padding: 0px 10px;
@@ -32,11 +32,17 @@ body {
     border-radius: 3px;
 }
 
+.topBarIcon:hover {
+    background-color: rgba(10, 10, 10, 0.7);
+}
+
 #backIndex {
     margin-right: 20px;
+    text-decoration: none;
 }
 
 #mainBody {
+    margin-top: 20px;
     display: grid;
     grid-template-columns: 1fr 3fr;
 }
@@ -48,17 +54,236 @@ body {
 }
 
 #mB-side {
-    width: 230px;
-    height: 100px;
-    background-color: #fff;
+    width: 240px;
+    height: auto;
     margin: 0 auto;
-    margin-right: 20px;
-}
-
-#mB-content {
+    margin-right: 10px;
     display: flex;
     flex-direction: column;
     height: auto;
+}
+
+#profilePhotoOut {
+    border-radius: 50%;
+    background-color: rgb(17, 17, 17);
+    height: 112px;
+    width: 112px;
+    position: relative;
+    cursor: pointer;
+    text-decoration: none;
+    display: block;
+}
+
+#profilePhotoOut:hover {
+    filter: opacity(0.9);
+}
+
+#profilePhotoIn {
+    border-radius: 50%;
+    background-color: rgb(240, 240, 240);
+    height: 110.5px;
+    width: 110.5px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#profilePhotoIn img {
+    border-radius: 50%;
+    height: 100px;
+    width: 100px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#mB-sideName {
+    font-weight: bold;
+    font-size: 30px;
+    color: rgb(17, 17, 17);
+    margin-top: 25px;
+    margin-bottom: 25px;
+    cursor: pointer;
+    text-decoration: none;
+    display: block;
+}
+
+.sideBarItem {
+    background-color: rgb(255, 255, 255);
+    margin-top: 2px;
+    width: 240px;
+    height: 30px;
+    line-height: 30px;
+    padding-left: 10px;
+    font-size: 12px;
+    color: rgb(17, 17, 17);
+    box-sizing: border-box;
+    cursor: pointer;
+    transition: all 0.8s;
+}
+
+.sideBarItem:hover {
+    color: rgb(255, 255, 255);
+    background-color: rgb(17, 17, 17);
+    border-radius: 0px 3px 3px 0px;
+    transition: all 0.8s;
+}
+
+#sideBarItemChoiced {
+    color: rgb(255, 255, 255);
+    background-color: rgb(17, 17, 17);
+    border-radius: 0px 3px 3px 0px;
+}
+
+#moreInfo {
+    background-color: rgb(255, 255, 255);
+    margin-top: 30px;
+    width: 240px;
+    height: 120px;
+    line-height: 25px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    font-size: 12px;
+    color: rgb(75, 75, 75);
+    box-sizing: border-box;
+}
+
+#search input[type=text] {
+    display: block;
+    background-color: rgb(255, 255, 255);
+    margin-top: 30px;
+    width: 240px;
+    height: 30px;
+    line-height: 30px;
+    padding-left: 10px;
+    font-size: 12px;
+    color: rgb(17, 17, 17);
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+}
+
+#mB-totalContent {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+}
+
+#mB-content {
+    width: 900px;
+    height: auto;
+    margin: 0 auto;
+    margin-left: 10px;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.contentItem {
+    position: absolute;
+    width: 280px;
+    height: auto;
+    background-color: rgb(255, 255, 255);
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+}
+
+.contentItemImg {
+    width: 250px;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.contentItemImg img {
+    width: 250px;
+    cursor: pointer;
+}
+
+.contentItemArticle {
+    width: 250px;
+    height: auto;
+    margin-bottom: 10px;
+    line-height: 30px;
+    font-size: 12px;
+    color: rgb(17, 17, 17);
+}
+
+.contentItemBottom {
+    width: 250px;
+    height: 15px;
+    line-height: 15px;
+}
+
+.contentItemBottom img {
+    display: block;
+    height: 15px;
+    float: right;
+    cursor: pointer;
+}
+
+#mB-bottom {
+    width: 900px;
+    height: 50px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+/*#next-black {
+    margin: 10px auto;
+    margin-bottom: 0px;
+    color: rgb(255, 255, 255);
+    background-color: rgb(17, 17, 17);
+    width: 130px;
+    height: 0px;
+    line-height: 30px;
+    text-align: center;
+    font-size: 12px;
+    box-sizing: border-box;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+#next {
+    margin: 10px auto;
+    margin-top: 0px;
+    background-color: rgb(255, 255, 255);
+    width: 130px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    font-size: 12px;
+    color: rgb(17, 17, 17);
+    box-sizing: border-box;
+    cursor: pointer;
+    transition: all 0.3s;
+}*/
+
+#next {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgb(255, 255, 255);
+    width: 130px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    font-size: 12px;
+    color: rgb(17, 17, 17);
+    box-sizing: border-box;
+    cursor: pointer;
+    transition: all 0.8s;
+}
+
+#next:hover {
+    color: rgb(255, 255, 255);
+    background-color: rgb(17, 17, 17);
+    transition: all 0.8s;
 }
 
 #bodyFooter {
