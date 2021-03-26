@@ -183,22 +183,22 @@ window.onload = function () {
     setInterval(buttonAppear, 1);
     //回到顶部end
 
-    //右侧为空时，menue模块出现并保持吸顶start
+    //右侧为空时，menu模块出现并保持吸顶start
     let mBSide = document.getElementById("mB-side");
-    let menueAppear = function () {
+    let menuAppear = function () {
         let currentPosition = document.documentElement.scrollTop || document.body.scrollTop;
-        let menue = document.getElementById("menue");
+        let men = document.getElementById("menu");
         let mBL = document.getElementById("mB-l");
         if (mBSide.offsetHeight - currentPosition - 610 < 0) {
-            menue.style.position = "fixed";
-            menue.style.left = mBL.right + 20 + "px"; //获取实时左侧相对距离
-            menue.style.top = 94 + "px";
+            menu.style.position = "fixed";
+            menu.style.left = mBL.right + 20 + "px"; //获取实时左侧相对距离
+            menu.style.top = 94 + "px";
         } else {
-            menue.style.position = "static";
+            menu.style.position = "static";
         }
     }
-    setInterval(menueAppear, 1);
-    //右侧为空时，menue模块出现并保持吸顶end
+    setInterval(menuAppear, 1);
+    //右侧为空时，menu模块出现并保持吸顶end
 }
 /*      function SetCookie(sName, sValue) {
         date = new Date();
