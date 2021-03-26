@@ -199,7 +199,12 @@ window.onload = function () {
     }
     setInterval(menuAppear, 1);
     //右侧为空时，menu模块出现并保持吸顶end
+    //图片懒加载start
+    var imgs = document.getElementsByTagName("img");
+    //图片懒加载end
 }
+
+
 /*      function SetCookie(sName, sValue) {
         date = new Date();
         s = date.getDate();

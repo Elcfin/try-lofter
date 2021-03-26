@@ -1,5 +1,13 @@
 window.onload = function () {
     waterFall();
+    let isFocused = document.getElementById("isFocused");
+    isFocused.onclick = function () {
+        if (isFocused.innerHTML == "+关注") {
+            isFocused.innerHTML = "取消关注";
+        } else {
+            isFocused.innerHTML = "+关注";
+        }
+    }
     let next = document.getElementById("next");
     next.onclick = function () {
         alert("没有下一页啦");
