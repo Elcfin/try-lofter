@@ -1,5 +1,9 @@
 window.onload = function () {
     waterFall();
+    let next = document.getElementById("next");
+    next.onclick = function () {
+        alert("没有下一页啦");
+    }
     /*let next = document.getElementById("next");
     let nextBlack = document.getElementById("next-black");
     next.onmouseover = function () {
@@ -15,6 +19,8 @@ window.onload = function () {
         nextBlack.innerHTML = "";
     }*/
 }
+
+
 
 function waterFall() {
     let contentItems = document.getElementsByClassName("contentItem");

@@ -248,6 +248,8 @@ body {
     box-sizing: border-box;
     cursor: pointer;
     transition: all 0.8s;
+    display: block;
+    text-decoration: none;
 }
 
 #previous:hover {
@@ -271,6 +273,8 @@ body {
     box-sizing: border-box;
     cursor: pointer;
     transition: all 0.8s;
+    display: block;
+    text-decoration: none;
 }
 
 #next:hover {
