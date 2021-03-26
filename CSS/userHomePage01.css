@@ -72,10 +72,12 @@ body {
     cursor: pointer;
     text-decoration: none;
     display: block;
+    transition: all 0.5s;
 }
 
 #profilePhotoOut:hover {
     filter: opacity(0.9);
+    transition: all 0.5s;
 }
 
 #profilePhotoIn {
