@@ -21,6 +21,7 @@ window.onload = function () {
         lazyload();
     };
     //懒加载end
+
     let tContentUserFocusChange = document.getElementsByClassName("tContentUserFocusChange");
     for (let i = 0; i < tContentUserFocusChange.length; i++) {
         tContentUserFocusChange[i].onclick = function () {
@@ -42,14 +43,11 @@ window.onload = function () {
 
 }
 
-
-
-
 /*
 function throttle(method, delay) {
-    var timer = null;
+    let timer = null;
     return function () {
-        var context = this,
+        let context = this,
             args = arguments;
         clearTimeout(timer);
         timer = setTimeout(function () {

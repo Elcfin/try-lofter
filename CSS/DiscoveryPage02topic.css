@@ -17,7 +17,7 @@ body {
     top: 0px;
     height: 64px;
     background-color: #1f1f1f;
-    z-index: 1;
+    z-index: 40;
     display: grid;
     grid-template-columns: 2fr 1fr;
 }
@@ -33,42 +33,6 @@ body {
     /*background-color: rgb(255, 255, 255);*/
     display: grid;
     grid-template-columns: 2fr 3fr 3fr;
-}
-
-#barIcons {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-}
-
-.barIcon {
-    position: relative;
-    font-weight: bold;
-}
-
-.barIcon a {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-size: 16px;
-    text-decoration: none;
-    color: #8a8a8a;
-}
-
-.barIcon a:hover {
-    color: rgb(255, 255, 255);
-}
-
-.barIcon img:hover {
-    filter: brightness(200%);
-}
-
-.barIcon img {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    height: 20px;
 }
 
 #logo {
@@ -90,6 +54,47 @@ body {
     font-weight: thin;
 }
 
+#barIcons {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.barIcon {
+    position: relative;
+}
+
+.barIcon a {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #8a8a8a;
+    transition: color 0.3s;
+}
+
+.barIcon a:hover {
+    color: rgb(255, 255, 255);
+    transition: color 0.3s;
+}
+
+.barIcon img:hover {
+    filter: brightness(200%);
+    transition: filter 0.3s;
+}
+
+.barIcon img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 20px;
+    filter: brightness(100%);
+    transition: filter 0.3s;
+}
+
 #search {
     position: relative;
 }
@@ -99,7 +104,7 @@ body {
     width: 80%;
     font-size: 12px;
     font-weight: bold;
-    padding: 6px;
+    padding: 6px 12px;
     margin-top: 4px;
     border: 4px solid transparent;
     border-radius: 26px;
@@ -121,7 +126,6 @@ body {
     width: 260px;
     margin: 12px auto;
     margin-left: 20px;
-    /*background-color: rgb(255, 255, 255);*/
     display: grid;
     grid-template-columns: repeat(4, 1fr);
 }
@@ -134,8 +138,8 @@ body {
 }
 
 #navBar {
-    height: 85px;
     width: 950px;
+    height: 85px;
     margin: 0 auto;
     display: grid;
     grid-template-columns: repeat(6, 1fr);
@@ -144,14 +148,16 @@ body {
 .navBarIcon {
     display: block;
     position: relative;
+    border-bottom: 4px solid rgb(255, 255, 255);
 }
 
+
 .navBarIcon div {
-    position: absolute;
     text-decoration: none;
     font-size: 18px;
     letter-spacing: 1.75px;
     color: #1f1f1f;
+    position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -185,8 +191,8 @@ body {
 
 .label {
     margin: 2.5px 15px;
-    height: 36px;
     width: 120px;
+    height: 36px;
     background-color: rgb(236, 236, 238);
     text-align: center;
 }
@@ -262,15 +268,17 @@ body {
     border-right: 1px solid rgb(255, 255, 255);
     background-color: rgb(175, 175, 175);
     cursor: pointer;
+    transition: filter 0.3s;
 }
 
 .picture:hover {
-    filter: brightness(90%)
+    filter: brightness(90%);
+    transition: filter 0.3s;
 }
 
 #bodyFooter {
-    height: 30px;
     width: 100%;
+    height: 30px;
     margin-top: 20px;
     margin-bottom: 10px;
     text-align: center;

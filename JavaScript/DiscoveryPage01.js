@@ -40,6 +40,7 @@ window.onload = function () {
         mBcontent.style.height = maxHeight + "px"; //记得加px
     }*/
     //瀑布流end
+
     //懒加载start
     let imgs = document.querySelectorAll("img");
 
@@ -63,9 +64,6 @@ window.onload = function () {
     };
     //懒加载end
 }
-
-
-
 
 /*
 function throttle(method, delay) {
