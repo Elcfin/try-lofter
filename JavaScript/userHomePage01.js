@@ -1,5 +1,4 @@
 window.onload = function () {
-    waterFall();
     let isFocused = document.getElementById("isFocused");
     isFocused.onclick = function () {
         if (isFocused.innerHTML == "+关注") {
@@ -8,6 +7,7 @@ window.onload = function () {
             isFocused.innerHTML = "+关注";
         }
     }
+
     let next = document.getElementById("next");
     next.onclick = function () {
         alert("没有下一页啦");
@@ -26,6 +26,32 @@ window.onload = function () {
         next.innerHTML = "下一页";
         nextBlack.innerHTML = "";
     }*/
+    //懒加载start
+    let imgs = document.querySelectorAll("img");
+
+    function lazyload() {
+        let imgs = document.querySelectorAll("img");
+        //获取可视区域高度
+        let h = window.innerHeight;
+        //获取滚动区域高度
+        let s = document.documentElement.scrollTop;
+        for (let i = 0; i < imgs.length; i++) {
+            //图片距离顶部的距离小于可视区域和滚动区域之和时懒加载函数执行
+            if ((h + s) * 3 > imgs[i].offsetTop) {
+                imgs[i].src = imgs[i].getAttribute("data-src");
+            }
+        }
+    }
+
+    lazyload();
+    waterFall();
+    setTimeout(waterFall, 10);
+    //当滚动的时候懒加载函数执行
+    window.onscroll = function () {
+        lazyload();
+        waterFall();
+    };
+    //懒加载end
 }
 
 

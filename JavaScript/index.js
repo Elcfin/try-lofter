@@ -36,10 +36,21 @@ window.onload = function () {
     //评论展开与收起end
 
     //图片的展开与收起start
-    let uCContent = document.getElementsByClassName("uC-content");
+    /*let uCContent = document.getElementsByClassName("uC-content");
     for (let i = 0; i < uCContent.length; i++) {
         uCContent[i].onclick = function () {
             let uCContentImgVorInV = this.childNodes[1];
+            if (uCContentImgVorInV.className == "uC-contentImgMax") {
+                uCContentImgVorInV.className = "uC-contentImgMin";
+            } else if (uCContentImgVorInV.className == "uC-contentImgMin") {
+                uCContentImgVorInV.className = "uC-contentImgMax";
+            }
+        }
+    }*/
+    let uCContent = document.getElementsByClassName("uC-content");
+    for (let i = 0; i < uCContent.length; i++) {
+        uCContent[i].childNodes[1].onclick = function () {
+            let uCContentImgVorInV = this;
             if (uCContentImgVorInV.className == "uC-contentImgMax") {
                 uCContentImgVorInV.className = "uC-contentImgMin";
             } else if (uCContentImgVorInV.className == "uC-contentImgMin") {
@@ -199,9 +210,29 @@ window.onload = function () {
     }
     setInterval(menuAppear, 1);
     //右侧为空时，menu模块出现并保持吸顶end
-    //图片懒加载start
-    var imgs = document.getElementsByTagName("img");
-    //图片懒加载end
+
+    //懒加载start
+    let imgs = document.querySelectorAll("img");
+
+    function lazyload() {
+        let imgs = document.querySelectorAll("img");
+        //获取可视区域高度
+        let h = window.innerHeight;
+        //获取滚动区域高度
+        let s = document.documentElement.scrollTop;
+        for (let i = 0; i < imgs.length; i++) {
+            //图片距离顶部的距离小于可视区域和滚动区域之和时懒加载函数执行
+            if ((h + s) > imgs[i].offsetTop) {
+                imgs[i].src = imgs[i].getAttribute("data-src");
+            }
+        }
+    }
+    lazyload();
+    //当滚动的时候懒加载函数执行
+    window.onscroll = function () {
+        lazyload();
+    };
+    //懒加载end
 }
 
 
