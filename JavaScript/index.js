@@ -12,7 +12,13 @@ window.onload = function () {
         }
     }
     //红心与灰心end
-
+    /*let publishOut = document.getElementsByClassName("publishOut");
+    for (let i = 0; i < likeChange.length; i++) {
+        publishOut[i].onclick = function () {
+            let writing = this.parentNode.childNodes[1].value;
+            this.parentNode.parentNode.innerHTML += ;
+        }
+    }*/
     //评论展开与收起start
     let commentsChange = document.getElementsByClassName("commentsChange");
     for (let i = 0; i < commentsChange.length; i++) {
