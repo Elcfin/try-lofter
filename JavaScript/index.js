@@ -169,7 +169,7 @@ window.onload = function () {
     backTop.onclick = function () {
         let backToTop = function () {
             let currentPosition = document.documentElement.scrollTop || document.body.scrollTop;
-            currentPosition -= (currentPosition / 80);
+            currentPosition -= (currentPosition / 80); //越接近顶部速度越慢
             if (currentPosition > 0) {
                 window.scrollTo(0, currentPosition);
             } else {
@@ -195,12 +195,12 @@ window.onload = function () {
     //回到顶部end
 
     //右侧为空时，menu模块出现并保持吸顶start
-    let mBSide = document.getElementById("mB-side");
+    let mBSide = document.getElementById("mBsideMain");
     let menuAppear = function () {
         let currentPosition = document.documentElement.scrollTop || document.body.scrollTop;
         let men = document.getElementById("menu");
         let mBL = document.getElementById("mB-l");
-        if (mBSide.offsetHeight - currentPosition - 610 < 0) {
+        if (mBSide.offsetHeight - currentPosition < 0) {
             menu.style.position = "fixed";
             menu.style.left = mBL.right + 20 + "px"; //获取实时左侧相对距离
             menu.style.top = 94 + "px";
