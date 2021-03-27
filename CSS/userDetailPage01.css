@@ -66,23 +66,25 @@ body {
 #profilePhotoOut {
     border-radius: 50%;
     background-color: rgb(17, 17, 17);
-    height: 112px;
     width: 112px;
+    height: 112px;
     position: relative;
     cursor: pointer;
     text-decoration: none;
     display: block;
+    transition: opacity 0.3s;
 }
 
 #profilePhotoOut:hover {
     filter: opacity(0.9);
+    transition: opacity 0.3s;
 }
 
 #profilePhotoIn {
     border-radius: 50%;
     background-color: rgb(240, 240, 240);
-    height: 110.5px;
     width: 110.5px;
+    height: 110.5px;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -91,8 +93,8 @@ body {
 
 #profilePhotoIn img {
     border-radius: 50%;
-    height: 100px;
     width: 100px;
+    height: 100px;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -112,13 +114,13 @@ body {
 
 .sideBarItem {
     background-color: rgb(255, 255, 255);
-    margin-top: 2px;
     width: 240px;
     height: 30px;
     line-height: 30px;
-    padding-left: 10px;
     font-size: 12px;
     color: rgb(17, 17, 17);
+    margin-top: 2px;
+    padding-left: 10px;
     box-sizing: border-box;
     cursor: pointer;
     transition: all 0.8s;
@@ -139,28 +141,28 @@ body {
 
 #moreInfo {
     background-color: rgb(255, 255, 255);
-    margin-top: 30px;
     width: 240px;
     height: 120px;
     line-height: 25px;
+    font-size: 12px;
+    color: rgb(75, 75, 75);
+    margin-top: 30px;
     padding-top: 10px;
     padding-bottom: 10px;
     padding-left: 10px;
-    font-size: 12px;
-    color: rgb(75, 75, 75);
     box-sizing: border-box;
 }
 
 #search input[type=text] {
     display: block;
     background-color: rgb(255, 255, 255);
-    margin-top: 30px;
     width: 240px;
     height: 30px;
     line-height: 30px;
-    padding-left: 10px;
     font-size: 12px;
     color: rgb(17, 17, 17);
+    margin-top: 30px;
+    padding-left: 10px;
     box-sizing: border-box;
     outline: none;
     border: none;
@@ -176,11 +178,11 @@ body {
     width: 900px;
     height: auto;
     margin: 0 auto;
-    margin-left: 10px;
     margin-bottom: 20px;
+    margin-left: 10px;
+    padding: 30px;
     position: relative;
     background-color: rgb(255, 255, 255);
-    padding: 30px;
     display: flex;
     flex-direction: column;
     box-sizing: border-box;
