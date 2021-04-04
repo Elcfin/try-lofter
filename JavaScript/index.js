@@ -204,7 +204,7 @@ window.onload = function () {
     let mBSide = document.getElementById("mBsideMain");
     let menuAppear = function () {
         let currentPosition = document.documentElement.scrollTop || document.body.scrollTop;
-        let men = document.getElementById("menu");
+        let menu = document.getElementById("menu");
         let mBL = document.getElementById("mB-l");
         if (mBSide.offsetHeight - currentPosition < 0) {
             menu.style.position = "fixed";
@@ -218,8 +218,6 @@ window.onload = function () {
     //右侧为空时，menu模块出现并保持吸顶end
 
     //懒加载start
-    let imgs = document.querySelectorAll("img");
-
     function lazyload() {
         let imgs = document.querySelectorAll("img");
         //获取可视区域高度

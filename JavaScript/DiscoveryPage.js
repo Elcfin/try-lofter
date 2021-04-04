@@ -1,7 +1,5 @@
 window.onload = function () {
     //懒加载start
-    let imgs = document.querySelectorAll("img");
-
     function lazyload() {
         let imgs = document.querySelectorAll("img");
         //获取可视区域高度

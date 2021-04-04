@@ -1,0 +1,143 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <link href="..\css\userDetailPage02.css" rel="stylesheet" type="text/css">
+    <script src="..\JavaScript\userDetailPage02.js" type="text/javascript">
+    </script>
+    <script type="text/javascript">
+        /*
+         * Jsonp方式解决
+         * 通过ajax请求本地文件时出现的跨域问题
+         */
+        function getJson(data) {
+            dataContent = data;
+        }
+    </script>
+    <script src="..\Json\userDetailPage02.json?callback=getJson" type="text/javascript">
+    </script>
+    <title>Elcfin</title>
+</head>
+
+<body>
+    <div id="totalBody">
+        <div id="topBar">
+            <a href="..\index.html" id="backIndex" class="topBarIcon">返回首页</a>
+            <div id="isFocused" class="topBarIcon">取消关注</div>
+        </div>
+        <div id="mainBody">
+            <div id="mainBodyTop">
+                <a href="UserHomePage02.html" id="profilePhotoOut">
+                    <div id="profilePhotoIn">
+                        <img data-src="..\Images\userPage\userPage02\dragon.jpg">
+                    </div>
+                </a>
+                <div id="mainBodyTopMiddle">
+                    <div id="name"><a href="UserHomePage02.html">Elcfin</a></div>
+                    <div id="icons">
+                        <div class="icon">私信</div>
+                        <div class="icon">归档</div>
+                    </div>
+                </div>
+                <div id="search">
+                    <input type="text" placeholder="搜索">
+                </div>
+            </div>
+            <div id="mainBodyCotent">
+                <div id="item">
+                    <div id="itemLeft">
+                        <div id="dayOut">
+                            <div id="dayIn">
+                                day</div>
+                        </div>
+                        <div id="month">month</div>
+                    </div>
+                    <div id="itemRight">
+                        <div id="itemTitle">itemTitle</div>
+                        <div id="itemContent">
+                        </div>
+                        <div id="contentInfo">
+                            <div class="contentInfoItem" id="contentInfoItemComment">评论()</div>
+                            <div class="contentInfoItem" id="contentInfoItemPopularity">热度()</div>
+                        </div>
+                        <div id="bottom">
+                            <a id="previous">上一篇</a>
+                            <a id="next">下一篇</a>
+                        </div>
+                    </div>
+                </div>
+                <!--一个item结束-->
+            </div>
+        </div>
+        <div id="bodyFooter">
+            <p>联系我 | Elcfin | lofter复刻 | 华中科技大学 | 冰岩实习任务</p>
+        </div>
+    </div>
+</body>
+
+<script type="text/javascript">
+    let items = [0, 1, 2, 3, 4];
+    let previous = document.getElementById("previous");
+    let next = document.getElementById("next");
+    let j = 0;
+
+    previous.addEventListener("click", function () {
+        if (j > 0) {
+            j--;
+        }
+        else {
+            j = 0;
+        }
+        changeContent();
+    }, false);
+
+    next.addEventListener("click", function () {
+        if (j < items.length - 1) {
+            j++;
+        }
+        else {
+            j = items.length - 1;
+        }
+        changeContent();
+    }, false);
+
+    function changeContent() {
+        for (n in dataContent) {
+            let id = document.getElementById(n);
+            if (id && n != "paragraphs") {
+                id.innerHTML = dataContent[n][j];
+            }
+            else if (n == "paragraphs") {
+                let itemContent = document.getElementById("itemContent");
+                itemContent.innerHTML = "";
+                for (let i = 0; i < dataContent[n][j].length; i++) {
+                    let p = document.createElement("p");
+                    let br = document.createElement("br");
+                    p.innerHTML = dataContent[n][j][i];
+                    itemContent.appendChild(p);
+                    itemContent.appendChild(br);
+                    itemContent.appendChild(br);
+                }
+            }
+        }
+
+        if (j == 0) {
+            previous.style.display = "none";
+        }
+        else if (j == items.length - 1) {
+            next.style.display = "none";
+        }
+        else {
+            previous.style.display = "block";
+            next.style.display = "block";
+        }
+        /*
+         * 每次更改页面内容后回到顶部
+         */
+        scrollTo(0, 0);
+    }
+    changeContent();
+</script>
+
+</html>
