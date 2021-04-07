@@ -1,0 +1,579 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <link href="../css/DiscoveryPage.css" rel="stylesheet" type="text/css">
+    <link href="../css/DiscoveryPage01trend.css" rel="stylesheet" type="text/css">
+    <link href="../css/DiscoveryPage02topic.css" rel="stylesheet" type="text/css">
+    <link href="../css/DiscoveryPage03label.css" rel="stylesheet" type="text/css">
+    <link href="../css/DiscoveryPage04talent.css" rel="stylesheet" type="text/css">
+    <link href="../css/DiscoveryPage05special.css" rel="stylesheet" type="text/css">
+    <link href="../css/DiscoveryPage06style.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript">
+        window.onload = function () {
+            let navBar = document.getElementById("navBar");
+            navBar.onclick = function () {
+                let mainBody = document.getElementById("mainBody");
+                if (event.target.className == "navBarIcon" || event.target.className == "navBarIconChoiced") {
+                    for (let j = 0; j < this.childNodes.length; j++) {
+                        if (this.childNodes[j].nodeType == 1) {
+                            this.childNodes[j].className = "navBarIcon";
+                        }
+                    }
+                    event.target.className = "navBarIconChoiced";
+                    for (let j = 0; j < this.childNodes.length; j++) {
+                        if (this.childNodes[j].nodeType == 1) {
+                            if (this.childNodes[j].className == "navBarIconChoiced") {
+                                mainBody.childNodes[j].style.display = "block";
+                            }
+                            else { mainBody.childNodes[j].style.display = "none"; }
+                        }
+
+                    }
+                }
+            }
+            {
+                let i = 0;
+                while (navBar.childNodes[i]) {
+                    if (navBar.childNodes[i].nodeType != 1) {
+                        i++;
+                    }
+                    else {
+                        navBar.childNodes[i].click();
+                        break;
+                    }
+                }
+            }
+
+        }
+    </script>
+    <title>LOFTER（乐乎）- 让兴趣，更有趣</title>
+</head>
+
+<body style="overflow-x:hidden;">
+    <div id="totalBody">
+        <!--topBar-->
+        <div id="topBar">
+            <div id="topBarl">
+                <div id="topBarll">
+                    <a href="#" id="logo">
+                        <img data-src="..\Images\index\other\lofter.svg">
+                        <div id="lofter">LOFTER</div>
+                    </a>
+                    <div id="barIcons">
+                        <div class="barIcon">
+                            <a href="..\index.html">首页</a>
+                        </div>
+                        <div class="barIcon">
+                            <a href="#">发现</a>
+                        </div>
+                        <div class="barIcon">
+                            <a href="#">APP</a>
+                        </div>
+                    </div>
+                    <div id="search">
+                        <input type="text" placeholder="搜索用户、标签">
+                    </div>
+                </div>
+            </div>
+            <div id="topBarr">
+                <div id="topBarrr">
+                    <div class="barIcon">
+                        <a href="#"><img data-src="..\Images\index\icon\smallBell.svg"></a>
+                    </div>
+                    <div class="barIcon">
+                        <a href="#"><img data-src="..\Images\index\icon\chat.svg"></a>
+                    </div>
+                    <div class="barIcon">
+                        <a href="#"><img data-src="..\Images\index\icon\set.svg"></a>
+                    </div>
+                    <div class="barIcon">
+                        <a href="#"><img data-src="..\Images\index\icon\more.svg"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--topBar结束-->
+        <div id="nav">
+            <div id="navBar">
+                <a class="navBarIcon">
+                    <div>趋势</div>
+                </a>
+                <a class="navBarIcon">
+                    <div>话题</div>
+                </a>
+                <a class="navBarIcon">
+                    <div>标签</div>
+                </a>
+                <a class="navBarIcon">
+                    <div>达人</div>
+                </a>
+                <a class="navBarIcon">
+                    <div>专题</div>
+                </a>
+                <a class="navBarIcon">
+                    <div>风格模板</div>
+                </a>
+            </div>
+        </div>
+        <div id="mainBody">
+            <div class="mainBodyItem">
+                <div id="mainBody01trend">
+                    <div id="container">
+                        <div class="item">
+                            <div class="itemContent">
+                                <div class="itemContentTop">
+                                    <div class="itemContentTopName">phakkkkkkk</div>
+                                    <input type="button" value="关注">
+                                </div>
+                                <img data-src="..\Images\DiscoveryPage\01\DaiLan101.jpg">
+                                <div class="itemContentArticle">山河岁月天地远</div>
+                                <div class="itemContentBottom">
+                                    <img data-src="..\Images\DiscoveryPage\01\item\like.svg">
+                                    <div class="itemContentBottomLike">4808人喜欢</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="itemContent">
+                                <div class="itemContentTop">
+                                    <div class="itemContentTopName">趁诗酒年华</div>
+                                    <input type="button" value="关注">
+                                </div>
+                                <img data-src="..\Images\DiscoveryPage\01\DaiLan202.jpg">
+                                <div class="itemContentArticle">岚岚</div>
+                                <div class="itemContentBottom">
+                                    <img data-src="..\Images\DiscoveryPage\01\item\like.svg">
+                                    <div class="itemContentBottomLike">13038人喜欢</div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="item">
+                            <div class="itemContent">
+                                <div class="itemContentTop">
+                                    <div class="itemContentTopName">地下城堡</div>
+                                    <input type="button" value="关注">
+                                </div>
+                                <img data-src="..\Images\DiscoveryPage\01\red03.jpg">
+                                <div class="itemContentArticle">团团圆圆</div>
+                                <div class="itemContentBottom">
+                                    <img data-src="..\Images\DiscoveryPage\01\item\like.svg">
+                                    <div class="itemContentBottomLike">8674人喜欢</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="itemContent">
+                                <div class="itemContentTop">
+                                    <div class="itemContentTopName">浅川</div>
+                                    <input type="button" value="关注">
+                                </div>
+                                <img data-src="..\Images\DiscoveryPage\01\SaHeEr04.jpg">
+                                <div class="itemContentArticle">萨猫猫</div>
+                                <div class="itemContentBottom">
+                                    <img data-src="..\Images\DiscoveryPage\01\item\like.svg">
+                                    <div class="itemContentBottomLike">7107人喜欢</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="itemContent">
+                                <div class="itemContentTop">
+                                    <div class="itemContentTopName">kukakuka</div>
+                                    <input type="button" value="关注">
+                                </div>
+                                <img data-src="..\Images\DiscoveryPage\01\ShanHaiZhiYue05.jpg">
+                                <div class="itemContentArticle">山海之约</div>
+                                <div class="itemContentBottom">
+                                    <img data-src="..\Images\DiscoveryPage\01\item\like.svg">
+                                    <div class="itemContentBottomLike">6815人喜欢</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="itemContent">
+                                <div class="itemContentTop">
+                                    <div class="itemContentTopName">江白烟云</div>
+                                    <input type="button" value="关注">
+                                </div>
+                                <img data-src="..\Images\DiscoveryPage\01\ShaShengWanLingLing06.jpg">
+                                <div class="itemContentArticle">怀念</div>
+                                <div class="itemContentBottom">
+                                    <img data-src="..\Images\DiscoveryPage\01\item\like.svg">
+                                    <div class="itemContentBottomLike">15835人喜欢</div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="item">
+                            <div class="itemContent">
+                                <div class="itemContentTop">
+                                    <div class="itemContentTopName">鲸蛰浅空</div>
+                                    <input type="button" value="关注">
+                                </div>
+                                <img data-src="..\Images\DiscoveryPage\01\YunWuYue07.jpg">
+                                <div class="itemContentArticle">老婆，嗷呜</div>
+                                <div class="itemContentBottom">
+                                    <img data-src="..\Images\DiscoveryPage\01\item\like.svg">
+                                    <div class="itemContentBottomLike">19047人喜欢</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="itemContent">
+                                <div class="itemContentTop">
+                                    <div class="itemContentTopName">狐狸狸团子</div>
+                                    <input type="button" value="关注">
+                                </div>
+                                <img data-src="..\Images\DiscoveryPage\01\ShanHaiXiangFeng08.jpg">
+                                <div class="itemContentArticle">山海相逢</div>
+                                <div class="itemContentBottom">
+                                    <img data-src="..\Images\DiscoveryPage\01\item\like.svg">
+                                    <div class="itemContentBottomLike">14233人喜欢</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="itemContent">
+                                <div class="itemContentTop">
+                                    <div class="itemContentTopName">木子</div>
+                                    <input type="button" value="关注">
+                                </div>
+                                <img data-src="..\Images\DiscoveryPage\01\Lu09.jpg">
+                                <div class="itemContentArticle">鹿</div>
+                                <div class="itemContentBottom">
+                                    <img data-src="..\Images\DiscoveryPage\01\item\like.svg">
+                                    <div class="itemContentBottomLike">15987人喜欢</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="itemContent">
+                                <div class="itemContentTop">
+                                    <div class="itemContentTopName">白水鱼</div>
+                                    <input type="button" value="关注">
+                                </div>
+                                <img data-src="..\Images\DiscoveryPage\01\Shan10.jpg">
+                                <div class="itemContentArticle">翠</div>
+                                <div class="itemContentBottom">
+                                    <img data-src="..\Images\DiscoveryPage\01\item\like.svg">
+                                    <div class="itemContentBottomLike">5572人喜欢</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="itemContent">
+                                <div class="itemContentTop">
+                                    <div class="itemContentTopName">美味豆腐煲</div>
+                                    <input type="button" value="关注">
+                                </div>
+                                <img data-src="..\Images\DiscoveryPage\01\Fire11.jpg">
+                                <div class="itemContentArticle">灯火</div>
+                                <div class="itemContentBottom">
+                                    <img data-src="..\Images\DiscoveryPage\01\item\like.svg">
+                                    <div class="itemContentBottomLike">16670人喜欢</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="mainBodyItem">
+                <div id="mainBody02topic">
+                    <div id="topLabel">
+                        <div id="labels">
+                            <div class="label">
+                                <div class="labelContent">热门</div>
+                            </div>
+                            <div>
+                                <!--<div class="label"></div>
+                        <div class="labelContent">热门</div>-->
+                            </div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                        </div>
+                    </div>
+                    <div id="mainContent">
+                        <div id="mainContentLeft">
+                            <div class="item">
+                                <div class="itemTitle">印象最深的一句电影台词</div>
+                                <div class="itemJoinNumber">23447人参与</div>
+                                <div class="pictures">
+                                    <div class="picture"></div>
+                                    <div class="picture"></div>
+                                    <div class="picture"></div>
+                                    <div class="picture"></div>
+                                    <div class="picture"></div>
+                                    <div class="picture"></div>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="itemTitle">百合投喂计划</div>
+                                <div class="itemJoinNumber">8340人参与</div>
+                                <div class="pictures">
+                                    <div class="picture"></div>
+                                    <div class="picture"></div>
+                                    <div class="picture"></div>
+                                    <div class="picture"></div>
+                                    <div class="picture"></div>
+                                    <div class="picture"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="mainContentRight">
+                            <div class="item">
+                                <div class="itemTitle">给你看看我的手帐吧</div>
+                                <div class="itemJoinNumber">157786人参与</div>
+                                <div class="pictures">
+                                    <div class="picture"></div>
+                                    <div class="picture"></div>
+                                    <div class="picture"></div>
+                                    <div class="picture"></div>
+                                    <div class="picture"></div>
+                                    <div class="picture"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="mainBodyItem">
+                <div id="mainBody03label">
+                    <div id="mainBodyTop">
+                        <div class="topItem">
+                            <div class="topItemLabel">晒喵片</div>
+                        </div>
+                        <div class="topItem">
+                            <div class="topItemLabel">水墨画</div>
+                        </div>
+                        <div class="topItem"></div>
+                        <div class="topItem"></div>
+                        <div class="topItem"></div>
+                        <div class="topItem"></div>
+                        <div class="topItem"></div>
+                        <div class="topItem"></div>
+                        <div class="topItem"></div>
+                        <div class="topItem"></div>
+                        <div class="topItem"></div>
+                        <div class="topItem"></div>
+                        <div class="topItem"></div>
+                        <div class="topItem"></div>
+                        <div class="topItem"></div>
+                    </div>
+                    <div id="mainBodyRecommend">
+                        <div id="recommendTop">
+                            <div>推荐标签</div>
+                            <div>活跃度</div>
+                            <div>最近更新</div>
+                            <div>资深用户</div>
+                        </div>
+                        <div class="recommendItem">
+                            <div class="recommendItemLabelName">原神</div>
+                            <div class="recommendItemEnergy"></div>
+                            <div class="recommendItemUser">林林宝贝</div>
+                            <div class="recommendItemUser">林林宝贝</div>
+                        </div>
+                        <div class="recommendItem">
+                            <div class="recommendItemLabelName">柯南</div>
+                            <div class="recommendItemEnergy"></div>
+                            <div class="recommendItemUser">悦悦宝贝</div>
+                            <div class="recommendItemUser">悦悦宝贝</div>
+                        </div>
+                        <div class="recommendItem">
+                            <div class="recommendItemLabelName">机器学习</div>
+                            <div class="recommendItemEnergy"></div>
+                            <div class="recommendItemUser">瑾瑾宝贝</div>
+                            <div class="recommendItemUser">瑾瑾宝贝</div>
+                        </div>
+                        <div class="recommendItem"></div>
+                        <div class="recommendItem"></div>
+                        <div class="recommendItem"></div>
+                        <div class="recommendItem"></div>
+                        <div class="recommendItem"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="mainBodyItem">
+                <div id="mainBody04talent">
+                    <div id="mainBodyLeft">
+                        <div id="mainBodyLeftTop">
+                            <div id="mainBodyLeftTopLabels">
+                                <div class="mainBodyLeftTopLabel">
+                                    <span style="background-color: rgb(236, 236, 238);">领域达人</span>
+                                </div>
+                                <div class="mainBodyLeftTopLabel">
+                                    <span>标签达人</span>
+                                </div>
+                                <div class="mainBodyLeftTopLabel">
+                                    <span>我关注的人</span>
+                                </div>
+                                <div class="mainBodyLeftTopLabel">
+                                    <span>寻找好友</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mainBodyLeftContent">
+                            <div class="mainBodyLeftContentUser">
+                                <div class="tContentUserPic">
+                                    <img data-src="..\Images\DiscoveryPage\04\leaf.jpg">
+                                </div>
+                                <div class="tContentUserName">
+                                    <span>山月</span>
+                                </div>
+                                <div class="tContentUserDislike"><span>不喜欢</span></div>
+                                <div class="tContentUserFocus">
+                                    <input class="tContentUserFocusChange" type="button" value="+关注">
+                                </div>
+                            </div>
+                            <div class="mainBodyLeftContentArticles">
+                                <div class="mainBodyLeftContentArticle"></div>
+                                <div class="mainBodyLeftContentArticle"></div>
+                                <div class="mainBodyLeftContentArticle"></div>
+                                <div class="mainBodyLeftContentArticle"></div>
+                            </div>
+                        </div>
+                        <div class="mainBodyLeftContent">
+                            <div class="mainBodyLeftContentUser">
+                                <div class="tContentUserPic">
+                                    <img data-src="..\Images\DiscoveryPage\04\bird.jpg">
+                                </div>
+                                <div class="tContentUserName">
+                                    <span>岁月流金</span>
+                                </div>
+                                <div class="tContentUserDislike"><span>不喜欢</span></div>
+                                <div class="tContentUserFocus">
+                                    <input class="tContentUserFocusChange" type="button" value="+关注">
+                                </div>
+                            </div>
+                            <div class="mainBodyLeftContentArticles">
+                                <div class="mainBodyLeftContentArticle"></div>
+                                <div class="mainBodyLeftContentArticle"></div>
+                                <div class="mainBodyLeftContentArticle"></div>
+                                <div class="mainBodyLeftContentArticle"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="mainBodyright">
+                        <div id="mainBodyRightTop">
+                            <div><input type="button" value="达人认证"></div>
+                            <div><input type="button" value="创作者签约"></div>
+                        </div>
+                        <div id="mainBodyRightContent">
+                            <div id="mainBodyRightContentTitle">猜你喜欢
+                            </div>
+                            <div class="mainBodyRightContentItem">#文具
+                                <div>pick</div>
+                            </div>
+                            <div class="mainBodyRightContentItem">#萌宠
+                                <div>pick</div>
+                            </div>
+                            <div class="mainBodyRightContentItem"></div>
+                            <div class="mainBodyRightContentItem"></div>
+                            <div class="mainBodyRightContentItem"></div>
+                            <div class="mainBodyRightContentItem"></div>
+                            <div class="mainBodyRightContentItem"></div>
+                            <div class="mainBodyRightContentItem"></div>
+                            <div class="mainBodyRightContentItem"></div>
+                            <div class="mainBodyRightContentItem"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="mainBodyItem">
+                <div id="mainBody05special">
+                    <div id="mainBodyContent">
+                        <div class="contentItem">
+                        </div>
+                        <div class="contentItem">
+                        </div>
+                        <div class="contentItem">
+                        </div>
+                        <div class="contentItem">
+                        </div>
+                        <div class="contentItem">
+                        </div>
+                        <div class="contentItem">
+                        </div>
+                        <div class="contentItem">
+                        </div>
+                        <div class="contentItem">
+                        </div>
+                        <div class="contentItem">
+                        </div>
+                        <div class="contentItem">
+                        </div>
+                        <div class="contentItem">
+                        </div>
+                        <div class="contentItem">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="mainBodyItem">
+                <div id="mainBody06style">
+                    <div id="mainBodyTop">
+                        <div id="mBtopPic"></div>
+                        <div id="mBtopCharacter">《仲夏夜茫》</div>
+                    </div>
+                    <div id="mainBodyLabels">
+                        <div class="mainBodyLabel" style="background-color: rgb(237, 237, 239);">
+                            全部
+                        </div>
+                        <div class="mainBodyLabel">
+                            推荐
+                        </div>
+                        <div class="mainBodyLabel">
+                            文字
+                        </div>
+                        <div class="mainBodyLabel">
+                            单栏
+                        </div>
+                        <div class="mainBodyLabel">
+                            双栏
+                        </div>
+                        <div class="mainBodyLabel">
+                            格子
+                        </div>
+                    </div>
+                    <div id="mainBodyContent">
+                        <div class="contentItem">
+                            <div class="contentItemPic"></div>
+                            <div class="contentItemCharacter">腐草为萤</div>
+                        </div>
+                        <div class="contentItem">
+                        </div>
+                        <div class="contentItem">
+                        </div>
+                        <div class="contentItem">
+                            <div class="contentItemPic"></div>
+                            <div class="contentItemCharacter">参商</div>
+                        </div>
+
+                        <div class="contentItem">
+                            <div class="contentItemPic"></div>
+                            <div class="contentItemCharacter">草木不朽</div>
+                        </div>
+                        <div class="contentItem">
+                            <div class="contentItemPic"></div>
+                            <div class="contentItemCharacter">忽如远行客</div>
+                        </div>
+                        <div class="contentItem">
+                        </div>
+                        <div class="contentItem">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="bodyFooter">
+            <p>联系我 | Elcfin | lofter复刻 | 华中科技大学 | 冰岩实习任务</p>
+        </div>
+    </div>
+</body>
+<script src="..\JavaScript\lazyLoad.js" type="text/javascript"></script>
+
+</html>

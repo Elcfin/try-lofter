@@ -1,172 +1,4 @@
-* {
-    margin: 0;
-    padding: 0;
-}
-
-body {
-    background-color: #ededef;
-}
-
-#totalBody {
-    display: flex;
-    flex-direction: column;
-}
-
-#topBar {
-    position: sticky;
-    top: 0px;
-    height: 64px;
-    background-color: #1f1f1f;
-    z-index: 40;
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-}
-
-#topBarl {
-    display: flex;
-}
-
-#topBarll {
-    width: 670px;
-    margin: 12px auto;
-    margin-right: 20px;
-    /*background-color: rgb(255, 255, 255);*/
-    display: grid;
-    grid-template-columns: 2fr 3fr 3fr;
-}
-
-#logo {
-    display: flex;
-    justify-content: center;
-    text-decoration: none;
-}
-
-#logo img {
-    display: block;
-    height: 36px;
-    margin-left: 10px;
-}
-
-#lofter {
-    color: rgb(255, 255, 255);
-    margin-left: 2px;
-    font-size: 30px;
-    font-weight: thin;
-}
-
-#barIcons {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-}
-
-.barIcon {
-    position: relative;
-}
-
-.barIcon a {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-size: 16px;
-    font-weight: bold;
-    text-decoration: none;
-    color: #8a8a8a;
-    transition: color 0.3s;
-}
-
-.barIcon a:hover {
-    color: rgb(255, 255, 255);
-    transition: color 0.3s;
-}
-
-.barIcon img:hover {
-    filter: brightness(200%);
-    transition: filter 0.3s;
-}
-
-.barIcon img {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    height: 20px;
-    filter: brightness(100%);
-    transition: filter 0.3s;
-}
-
-#search {
-    position: relative;
-}
-
-#search input[type=text] {
-    float: right;
-    width: 80%;
-    font-size: 12px;
-    font-weight: bold;
-    padding: 6px 12px;
-    margin-top: 4px;
-    border: 4px solid transparent;
-    border-radius: 26px;
-    outline: none;
-}
-
-/*#search img {
-    position: absolute;
-    height: 18px;
-    left: 2px;
-    margin-top: 10px;
-}*/
-
-#topBarr {
-    display: flex;
-}
-
-#topBarrr {
-    width: 260px;
-    margin: 12px auto;
-    margin-left: 20px;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-}
-
-#nav {
-    height: 85px;
-    background-color: #ffffff;
-    margin-bottom: 50px;
-    box-shadow: 0px 1.5px 2px rgba(128, 128, 128, 0.4);
-}
-
-#navBar {
-    width: 950px;
-    height: 85px;
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: repeat(6, 1fr);
-}
-
-.navBarIcon {
-    display: block;
-    position: relative;
-    border-bottom: 4px solid rgb(255, 255, 255);
-}
-
-.navBarIcon div {
-    text-decoration: none;
-    font-size: 18px;
-    letter-spacing: 1.75px;
-    color: #1f1f1f;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-
-.navBarIcon:hover {
-    border-bottom: 4px solid rgb(154, 198, 0);
-}
-
-#mainBody {
+#mainBody03label {
     width: 960px;
     height: auto;
     background-color: rgb(255, 255, 255);
@@ -177,7 +9,7 @@ body {
         -1px -1px 1px rgba(128, 128, 128, 0.2);
 }
 
-#mainBodyTop {
+#mainBody03label #mainBodyTop {
     margin: 30px;
     width: 900px;
     height: auto;
@@ -187,7 +19,7 @@ body {
     justify-content: space-between;
 }
 
-.topItem {
+#mainBody03label .topItem {
     width: 170px;
     height: 170px;
     margin-bottom: 12px;
@@ -197,12 +29,12 @@ body {
     transition: filter 0.3s;
 }
 
-.topItem:hover {
+#mainBody03label .topItem:hover {
     filter: brightness(90%);
     transition: filter 0.3s;
 }
 
-.topItemLabel {
+#mainBody03label .topItemLabel {
     position: absolute;
     bottom: 10px;
     left: 10px;
@@ -219,24 +51,24 @@ body {
     opacity: 0.8;
 }
 
-#mainBodyRecommend {
+#mainBody03label #mainBodyRecommend {
     width: 960px;
     height: auto;
 }
 
-#recommendTop {
+#mainBody03label #recommendTop {
     background-color: rgb(255, 255, 255);
     font-size: 15px;
     color: rgb(136, 136, 136);
 }
 
-#recommendTop div {
+#mainBody03label #recommendTop div {
     margin: auto;
     margin-left: 30px;
 }
 
-#recommendTop,
-.recommendItem {
+#mainBody03label #recommendTop,
+#mainBody03label .recommendItem {
     width: 960px;
     height: 40px;
     border-bottom: 2px groove;
@@ -245,37 +77,26 @@ body {
     grid-template-columns: 3fr 1fr 1fr 1fr;
 }
 
-.recommendItem:nth-child(odd) {
+#mainBody03label .recommendItem:nth-child(odd) {
     background-color: rgb(255, 255, 255);
 }
 
-.recommendItem:nth-child(even) {
+#mainBody03label .recommendItem:nth-child(even) {
     background-color: rgb(245, 245, 245);
 }
 
-.recommendItem div {
+#mainBody03label .recommendItem div {
     margin: auto;
     margin-left: 30px;
 }
 
-.recommendItemLabelName {
+#mainBody03label .recommendItemLabelName {
     font-weight: bold;
     font-size: 15px;
     color: rgb(68, 68, 68);
 }
 
-.recommendItemUser {
+#mainBody03label .recommendItemUser {
     font-size: 13px;
     color: rgb(136, 136, 136);
-}
-
-#bodyFooter {
-    width: 100%;
-    height: 30px;
-    margin-top: 20px;
-    margin-bottom: 10px;
-    text-align: center;
-    line-height: 30px;
-    color: rgb(116, 128, 139);
-    font-size: 12px;
 }
