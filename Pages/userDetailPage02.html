@@ -67,7 +67,6 @@
                         </div>
                     </div>
                 </div>
-                <!--一个item结束-->
             </div>
         </div>
         <div id="bodyFooter">
@@ -81,6 +80,13 @@
     let previous = document.getElementById("previous");
     let next = document.getElementById("next");
     let j = 0;
+
+    let url = document.location.search;
+    let reg = /\d/;
+    if (url.indexOf("?") != -1) {
+        let itemIndex = url.search(reg);
+        j = url[itemIndex];
+    }
 
     previous.addEventListener("click", function () {
         if (j > 0) {
@@ -138,6 +144,33 @@
         scrollTo(0, 0);
     }
     changeContent();
+</script>
+
+<script type="text/javascript">
+
+    /*
+    let xmlhttp;
+
+    function loadXMLDoc(url) {
+        xmlhttp = new XMLHttpRequest();
+        xmlhttp.onreadystatechange = stateChange;
+        xmlhttp.open("GET", url, true);
+        xmlhttp.send(null);
+    }
+
+    function stateChange() {
+        if (xmlhttp.readyState == 4) {
+            if (xmlhttp.status == 0) {
+                let obj = JSON.parse(xmlhttp.responseText);
+                alert(obj);
+            } else {
+                alert("Problem retrieving data");
+            }
+        }
+    }
+
+    loadXMLDoc("http://elcfin.gitee.io/json/userDetailPage02.json");
+    */
 </script>
 
 </html>
