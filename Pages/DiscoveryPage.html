@@ -30,10 +30,10 @@
                             }
                             else { mainBodyItem[k++].style.display = "none"; }
                         }
-
                     }
                 }
             }
+
             {
                 let i = 0;
                 while (navBar.childNodes[i]) {
@@ -279,6 +279,7 @@
                         </div>
                     </div>
                 </div>
+                <script src="..\JavaScript\lazyLoadForDP01.js" type="text/javascript"></script>
             </div>
             <div class="mainBodyItem">
                 <div id="mainBody02topic">
@@ -482,6 +483,26 @@
                         </div>
                     </div>
                 </div>
+                <script type="text/javascript">
+                    let tContentUserFocusChange = document.getElementsByClassName("tContentUserFocusChange");
+                    for (let i = 0; i < tContentUserFocusChange.length; i++) {
+                        tContentUserFocusChange[i].onclick = function () {
+                            if (this.value == "取消关注") {
+                                this.value = "+关注";
+                                this.style.letterSpacing = 6 + "px";
+                                this.style.backgroundColor = "rgb(125, 166, 0)";
+                                this.style.color = "rgb(255,255,255)";
+                                alert("取消关注成功！");
+                            } else {
+                                this.value = "取消关注";
+                                this.style.letterSpacing = 1 + "px";
+                                this.style.backgroundColor = "rgb(234, 234, 234)";
+                                this.style.color = "rgb(160, 160, 160)";
+                                alert("关注成功！");
+                            }
+                        }
+                    }
+                </script>
             </div>
             <div class="mainBodyItem">
                 <div id="mainBody05special">
@@ -574,6 +595,6 @@
         </div>
     </div>
 </body>
-<script src="..\JavaScript\lazyLoad.js" type="text/javascript"></script>
+<script src="..\JavaScript\lazyLoadForDP01.js" type="text/javascript"></script>
 
 </html>

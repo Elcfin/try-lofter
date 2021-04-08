@@ -6,14 +6,13 @@
     <link href="..\css\userDetailPage02.css" rel="stylesheet" type="text/css">
     <script type="text/javascript">
         /*
-         * Jsonp方式解决
-         * 通过ajax请求本地文件时出现的跨域问题
+         * Jsonp方式
          */
         function getJson(data) {
             dataContent = data;
         }
     </script>
-    <script src="..\Json\userDetailPage02.json?callback=getJson" type="text/javascript">
+    <script src="..\Json\userPage02.json?callback=getJson" type="text/javascript">
     </script>
     <title>Elcfin</title>
 </head>
@@ -74,7 +73,6 @@
 </body>
 
 <script type="text/javascript">
-    let items = [0, 1, 2, 3, 4];
     let previous = document.getElementById("previous");
     let next = document.getElementById("next");
     let j = 0;
@@ -90,18 +88,12 @@
         if (j > 0) {
             j--;
         }
-        else {
-            j = 0;
-        }
         changeContent();
     }, false);
 
     next.addEventListener("click", function () {
-        if (j < items.length - 1) {
+        if (j < dataContent.itemsIndex.length - 1) {
             j++;
-        }
-        else {
-            j = items.length - 1;
         }
         changeContent();
     }, false);
@@ -129,7 +121,7 @@
         if (j == 0) {
             previous.style.display = "none";
         }
-        else if (j == items.length - 1) {
+        else if (j == dataContent.itemsIndex.length - 1) {
             next.style.display = "none";
         }
         else {
@@ -141,34 +133,8 @@
          */
         scrollTo(0, 0);
     }
+
     changeContent();
-</script>
-
-<script type="text/javascript">
-
-    /*
-    let xmlhttp;
-
-    function loadXMLDoc(url) {
-        xmlhttp = new XMLHttpRequest();
-        xmlhttp.onreadystatechange = stateChange;
-        xmlhttp.open("GET", url, true);
-        xmlhttp.send(null);
-    }
-
-    function stateChange() {
-        if (xmlhttp.readyState == 4) {
-            if (xmlhttp.status == 0) {
-                let obj = JSON.parse(xmlhttp.responseText);
-                alert(obj);
-            } else {
-                alert("Problem retrieving data");
-            }
-        }
-    }
-
-    loadXMLDoc("http://elcfin.gitee.io/json/userDetailPage02.json");
-    */
 </script>
 <script src="..\JavaScript\isFocused.js" type="text/javascript"></script>
 <script src="..\JavaScript\lazyLoad.js" type="text/javascript"></script>

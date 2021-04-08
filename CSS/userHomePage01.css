@@ -19,26 +19,24 @@ body {
 }
 
 .topBarIcon {
+    display: block;
     float: right;
     background-color: rgba(29, 29, 29, 0.7);
     height: 24px;
     font-size: 13px;
     padding: 0px 10px;
+    text-decoration: none;
     color: #fff;
     width: auto;
     margin: auto;
     margin-right: 10px;
+    margin-bottom: 10px;
     cursor: pointer;
     border-radius: 3px;
 }
 
 .topBarIcon:hover {
     background-color: rgba(10, 10, 10, 0.7);
-}
-
-#backIndex {
-    margin-right: 20px;
-    text-decoration: none;
 }
 
 #mainBody {

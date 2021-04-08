@@ -5,26 +5,14 @@
     <meta charset="utf-8">
     <link href="..\css\userHomePage01.css" rel="stylesheet" type="text/css">
     <script type="text/javascript">
-        window.onload = function () {
-            let next = document.getElementById("next");
-            next.onclick = function () {
-                alert("没有下一页啦");
-            }
-            /*let next = document.getElementById("next");
-            let nextBlack = document.getElementById("next-black");
-            next.onmouseover = function () {
-                nextBlack.style.height = 30 + "px";
-                next.style.height = 0 + "px";
-                next.innerHTML = "";
-                nextBlack.innerHTML = "下一页";
-            }
-            nextBlack.onmouseout = function () {
-                nextBlack.style.height = 0 + "px";
-                next.style.height = 30 + "px";
-                next.innerHTML = "下一页";
-                nextBlack.innerHTML = "";
-            }*/
+        /*
+         * Jsonp方式
+         */
+        function getJson(data) {
+            dataContent = data;
         }
+    </script>
+    <script src="..\Json\userPage01.json?callback=getJson" type="text/javascript">
     </script>
     <title>STAR影法师</title>
 </head>
@@ -62,107 +50,10 @@
             </div>
             <div id="mB-totalContent">
                 <div id="mB-content">
-                    <!--一个item开始-->
-                    <div class="contentItem">
-                        <div class="contentItemImg">
-                            <a href="userDetailPage01.html?item=0"><img
-                                    data-src="..\Images\userPage\userPage01\greenOctopus(01).jpg"></a>
-                        </div>
-                        <div class="contentItemArticle">忙里偷闲摸个章鱼</div>
-                        <div class="contentItemBottom">
-                            <a href="userDetailPage01.html?item=0"><img
-                                    data-src="..\Images\userPage\userPage01\add.svg"></a>
-                        </div>
-                    </div>
-                    <!--一个item结束-->
-                    <!--一个item开始-->
-                    <div class="contentItem">
-                        <div class="contentItemImg">
-                            <a href="userDetailPage01.html?item=1">
-                                <img data-src="..\Images\userPage\userPage01\(02).jpg"></a>
-                        </div>
-                        <div class="contentItemArticle">ALICEx2</div>
-                        <div class="contentItemBottom">
-                            <a href="userDetailPage01.html?item=1">
-                                <img data-src="..\Images\userPage\userPage01\add.svg"></a>
-                        </div>
-                    </div>
-                    <!--一个item结束-->
-                    <!--一个item开始-->
-                    <div class="contentItem">
-                        <div class="contentItemImg">
-                            <a href="userDetailPage01.html?item=2">
-                                <img data-src="..\Images\userPage\userPage01\(03).png"></a>
-                        </div>
-                        <div class="contentItemArticle">
-                            担任了Fate/Grand&nbsp;Order&nbsp;EXPO&nbsp;Special&nbsp;Online&nbsp;2020的主视觉~
-                        </div>
-                        <div class="contentItemBottom">
-                            <a href="userDetailPage01.html?item=2">
-                                <img data-src="..\Images\userPage\userPage01\add.svg"></a>
-                        </div>
-                    </div>
-                    <!--一个item结束-->
-                    <!--一个item开始-->
-                    <div class="contentItem">
-                        <div class="contentItemImg">
-                            <a href="userDetailPage01.html?item=3">
-                                <img data-src="..\Images\userPage\userPage01\(04).png"></a>
-                        </div>
-                        <div class="contentItemArticle">
-                        </div>
-                        <div class="contentItemBottom">
-                            <a href="userDetailPage01.html?item=3">
-                                <img data-src="..\Images\userPage\userPage01\add.svg"></a>
-                        </div>
-                    </div>
-                    <!--一个item结束-->
-                    <!--一个item开始-->
-                    <div class="contentItem">
-                        <div class="contentItemImg">
-                            <a href="userDetailPage01.html?item=4">
-                                <img data-src="..\Images\userPage\userPage01\(05).png"></a>
-                        </div>
-                        <div class="contentItemArticle">银耳&灵芝<br />
-                            最近超忙都没空瞎画了
-                        </div>
-                        <div class="contentItemBottom">
-                            <a href="userDetailPage01.html?item=4">
-                                <img data-src="..\Images\userPage\userPage01\add.svg"></a>
-                        </div>
-                    </div>
-                    <!--一个item结束-->
-                    <!--一个item开始-->
-                    <div class="contentItem">
-                        <div class="contentItemImg">
-                            <a href="userDetailPage01.html?item=5">
-                                <img data-src="..\Images\userPage\userPage01\(06).png"></a>
-                        </div>
-                        <div class="contentItemArticle">红盖小皮伞<br />
-                            霍氏粉褶菌</div>
-                        <div class="contentItemBottom">
-                            <a href="userDetailPage01.html?item=5">
-                                <img data-src="..\Images\userPage\userPage01\add.svg"></a>
-                        </div>
-                    </div>
-                    <!--一个item结束-->
-                    <!--一个item开始-->
-                    <div class="contentItem">
-                        <div class="contentItemImg">
-                            <a href="userDetailPage01.html?item=6">
-                                <img data-src="..\Images\userPage\userPage01\(07).png"></a>
-                        </div>
-                        <div class="contentItemArticle">竹荪涮火锅不错</div>
-                        <div class="contentItemBottom">
-                            <a href="userDetailPage01.html?item=6">
-                                <img data-src="..\Images\userPage\userPage01\add.svg"></a>
-                        </div>
-                    </div>
-                    <!--一个item结束-->
                 </div>
                 <div id="mB-bottom">
                     <!--<div id="next-black">下一页</div>-->
-                    <div id="next">下一页</div>
+                    <!--<div id="next">下一页</div>-->
                 </div>
             </div>
         </div>
@@ -171,9 +62,9 @@
         </div>
     </div>
 </body>
-
+<script src="..\JavaScript\addContentForUP01.js" type="text/javascript"></script>
 <script src="..\JavaScript\isFocused.js" type="text/javascript"></script>
-<script src="..\JavaScript\lazyLoad.js" type="text/javascript"></script>
 <script src="..\JavaScript\waterFall.js" type="text/javascript"></script>
+<script src="..\JavaScript\lazyLoad.js" type="text/javascript"></script>
 
 </html>
