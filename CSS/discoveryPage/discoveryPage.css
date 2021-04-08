@@ -146,43 +146,31 @@ body {
 }
 
 .navBarIcon {
-    display: block;
-    position: relative;
+    height: 85px;
+    text-align: center;
+    line-height: 85px;
+    font-size: 18px;
+    letter-spacing: 1.75px;
+    color: #1f1f1f;
+    box-sizing: border-box;
     border-bottom: 4px solid rgb(255, 255, 255);
     cursor: pointer;
 }
 
 .navBarIconChoiced {
-    display: block;
-    position: relative;
+    height: 85px;
+    text-align: center;
+    line-height: 85px;
+    font-size: 18px;
+    letter-spacing: 1.75px;
+    color: #1f1f1f;
+    box-sizing: border-box;
     border-bottom: 4px solid rgb(154, 198, 0);
     cursor: pointer;
 }
 
 .navBarIcon:hover {
     border-bottom: 4px solid rgb(154, 198, 0);
-}
-
-.navBarIconChoiced div {
-    position: absolute;
-    text-decoration: none;
-    font-size: 18px;
-    letter-spacing: 1.75px;
-    color: #1f1f1f;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-
-.navBarIcon div {
-    position: absolute;
-    text-decoration: none;
-    font-size: 18px;
-    letter-spacing: 1.75px;
-    color: #1f1f1f;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
 }
 
 #bodyFooter {
