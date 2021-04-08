@@ -36,9 +36,9 @@ window.onload = function () {
     commentsChange();
 
     function imgSizeChange() {
-        let uCContent = document.querySelectorAll(".uC-content");
-        for (let i = 0; i < uCContent.length; i++) {
-            uCContent[i].childNodes[1].onclick = function () {
+        let uCContentImg = document.querySelectorAll(".uC-content img");
+        for (let i = 0; i < uCContentImg.length; i++) {
+            uCContentImg[i].onclick = function () {
                 if (this.className == "uC-contentImgMax") {
                     this.className = "uC-contentImgMin";
                 } else if (this.className == "uC-contentImgMin") {
@@ -48,78 +48,73 @@ window.onload = function () {
         }
     }
 
-    imgSizeChange()
+    imgSizeChange();
 
-    let hideGreyIcon = document.getElementsByClassName("icon");
-    for (let i = 0; i < hideGreyIcon.length; i++) {
-        hideGreyIcon[i].addEventListener("click", function () {
-            let hideGrey = document.getElementById("hideGrey");
-            let bodyHeight = document.body.scrollHeight; //获取页面全部高度
+    function publishModule() {
+        let hideGreyIcon = document.querySelectorAll(".icon");
+
+        function hideGreyBack() {
+            let hideGrey = document.querySelector("#hideGrey");
+            let bodyHeight = document.documentElement.scrollHeight; //获取页面全部高度
             hideGrey.style.display = "block";
             hideGrey.style.height = bodyHeight + "px";
-        });
-        hideGreyIcon[i].addEventListener("click", function () {
-            let hidePublish = document.getElementById("hidePublish");
-            hidePublish.style.opacity = 1;
-            hidePublish.style.height = "auto";
-            hidePublish.style.zIndex = 60;
-            let pbName = document.getElementById("pb-name");
-            pbName.style.height = 30 + "px";
-            let pbContent = document.getElementById("pb-content");
-            pbContent.style.height = 200 + "px";
-            let publishBar = document.getElementById("publishBar");
-            publishBar.style.opacity = 0;
-            publishBar.style.height = 0;
-            let profilePhotoPublisher = document.getElementById("profilePhotoPublisher");
-            profilePhotoPublisher.style.height = 60 + "px";
-            let profilePhotoPublisherImg = document.getElementById("profilePhotoPublisherImg");
-            profilePhotoPublisherImg.style.height = 60 + "px";
-            let profilePhotoImg = document.getElementById("profilePhotoImg");
-            profilePhotoImg.style.height = 0 + "px";
-            profilePhotoImg.style.opacity = 0;
-            let publishTriangle = document.getElementById("publishTriangle");
-            publishTriangle.style.opacity = 1;
-            let hidePublishContent = document.getElementById("hidePublishContent");
-            hidePublishContent.style.opacity = 1;
-            let iconImg = document.getElementsByClassName("iconImg");
-            let c = document.getElementsByClassName("c");
-            for (var i = 0; i < iconImg.length; i++) {
-                iconImg[i].style.opacity = 0;
-                c[i].style.opacity = 0;
-            }
-        });
-    }
-    let cancel = document.getElementById("cancel");
-    cancel.addEventListener("click", function () {
-        let hideGrey = document.getElementById("hideGrey");
-        hideGrey.style.display = "none";
-        let hidePublish = document.getElementById("hidePublish");
-        hidePublish.style.opacity = 0;
-        hidePublish.style.height = 0 + "px";
-        hidePublish.style.zIndex = 20;
-        let publishBar = document.getElementById("publishBar");
-        publishBar.style.opacity = 1;
-        publishBar.style.height = 114 + "px";
-        let pbName = document.getElementById("pb-name");
-        pbName.style.height = 12.5 + "px";
-        let pbContent = document.getElementById("pb-content");
-        pbContent.style.height = 0 + "px";
-        let profilePhotoPublisher = document.getElementById("profilePhotoPublisher");
-        profilePhotoPublisher.style.height = 0 + "px";
-        let profilePhotoPublisherImg = document.getElementById("profilePhotoPublisherImg");
-        profilePhotoPublisherImg.style.height = 0 + "px";
-        let profilePhotoImg = document.getElementById("profilePhotoImg");
-        profilePhotoImg.style.height = 114 + "px";
-        profilePhotoImg.style.opacity = 1;
-        let publishTriangle = document.getElementById("publishTriangle");
-        publishTriangle.style.opacity = 0;
-        let hidePublishContent = document.getElementById("hidePublishContent");
-        hidePublishContent.style.opacity = 0;
-        let iconImg = document.getElementsByClassName("iconImg");
-        let c = document.getElementsByClassName("c");
-        for (var i = 0; i < iconImg.length; i++) {
-            iconImg[i].style.opacity = 1;
-            c[i].style.opacity = 1;
         }
-    });
+
+        for (let i = 0; i < hideGreyIcon.length; i++) {
+            hideGreyIcon[i].addEventListener("click", hideGreyBack, false);
+            hideGreyIcon[i].addEventListener("click", function () {
+                let hidePublish = document.querySelector("#hidePublish");
+                let publishBar = document.querySelector("#publishBar");
+                hidePublish.id = "hidePublish-inv";
+                publishBar.id = "publishBar-inv";
+            }, false);
+        }
+
+        let cancel = document.getElementById("cancel");
+
+        function hideGreyBackCancel() {
+            let hideGrey = document.querySelector("#hideGrey");
+            hideGrey.style.display = "none";
+        }
+        cancel.addEventListener("click", hideGreyBackCancel, false);
+        cancel.addEventListener("click", function () {
+            let hidePublish = document.querySelector("#hidePublish-inv");
+            let publishBar = document.querySelector("#publishBar-inv");
+            hidePublish.id = "hidePublish";
+            publishBar.id = "publishBar";
+        }, false);
+    }
+
+    publishModule();
+
+    function commentPublishOut() {
+        let commentsTotal = document.querySelectorAll(".commentsTotal");
+        for (let i = 0; i < commentsTotal.length; i++) {
+            commentsTotal[i].onclick = function () {
+                if (event.target.className == "publishOut") {
+                    let writing = this.querySelector(".publishOutWrite").value;
+                    let divComment = document.createElement("div");
+                    divComment.className = "comment";
+                    let div = document.createElement("div");
+                    let divCommentName = document.createElement("div");
+                    divCommentName.className = "commentName";
+                    divCommentName.innerHTML = "Elcfin";
+                    let divCommentContent = document.createElement("div");
+                    divCommentContent.className = "commentContent";
+                    divCommentContent.innerHTML = writing;
+                    div.appendChild(divCommentName);
+                    div.appendChild(divCommentContent);
+                    let divCommentReply = document.createElement("div");
+                    divCommentReply.className = "commentReply";
+                    divCommentReply.innerHTML = "回复";
+                    divComment.appendChild(div);
+                    divComment.appendChild(divCommentReply);
+                    this.appendChild(divComment);
+                    this.querySelector(".publishOutWrite").value = "";
+                }
+            }
+        }
+    }
+
+    commentPublishOut()
 }
