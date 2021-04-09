@@ -19,7 +19,7 @@ function addlist() {
         '<div class="uCb-like"><ul class="dock"><li><span class="popularity"></span></li><li><span class="commentsChange"></span></li><li><span>分享</span></li><li><span>推荐</span></li><li style="padding-right: 0px;"><span><img class="likeChange" data-src="Images\\index\\uC-bottomicon\\like.svg"></span></li></ul></div>'
     ];
     let commentsInvArray = [
-        '<div class="commentsTotal"><div class="publish"><input class="publishOutWrite" type="text"><input class="publishOut" type="submit" value="发布" /></div></div>'
+        '<div class="publish"><input class="publishOutWrite" type="text"><input class="publishOut" type="submit" value="发布" /></div><div class="commentsTotal"></div>'
     ];
 
 
@@ -120,5 +120,13 @@ for (let i = 0; i < dataContent.itemsIndex.length; i++) {
         divComment.appendChild(divCommentReply);
         commentsTotal[i].appendChild(divComment);
     }
-
 }
+
+window.addEventListener("scroll", () => {
+    let scrollHeight = document.documentElement.scrollHeight;
+    let scrollTop = document.documentElement.scrollTop;
+    let clientHeight = document.documentElement.clientHeight;
+    if (scrollHeight - scrollTop == clientHeight) {
+        addlist();
+    }
+}, false);

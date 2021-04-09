@@ -19,7 +19,7 @@ window.onload = function () {
     function commentsChange() {
         let userContentOut = document.querySelectorAll(".userContentOut");
         for (let i = 0; i < userContentOut.length; i++) {
-            userContentOut[i].onclick = function () {
+            userContentOut[i].addEventListener("click", function () {
                 if (event.target.className == "commentsChange") {
                     let commentsV = this.querySelector(".comments-v");
                     let commentsInV = this.querySelector(".comments-inv");
@@ -29,7 +29,7 @@ window.onload = function () {
                         commentsV.className = "comments-inv";
                     }
                 }
-            }
+            }, false);
         }
     }
 
@@ -88,9 +88,9 @@ window.onload = function () {
     publishModule();
 
     function commentPublishOut() {
-        let commentsTotal = document.querySelectorAll(".commentsTotal");
-        for (let i = 0; i < commentsTotal.length; i++) {
-            commentsTotal[i].onclick = function () {
+        let userContentOut = document.querySelectorAll(".userContentOut");
+        for (let i = 0; i < userContentOut.length; i++) {
+            userContentOut[i].addEventListener("click", function () {
                 if (event.target.className == "publishOut") {
                     let writing = this.querySelector(".publishOutWrite").value;
                     let divComment = document.createElement("div");
@@ -109,10 +109,10 @@ window.onload = function () {
                     divCommentReply.innerHTML = "回复";
                     divComment.appendChild(div);
                     divComment.appendChild(divCommentReply);
-                    this.appendChild(divComment);
+                    this.querySelector(".commentsTotal").appendChild(divComment);
                     this.querySelector(".publishOutWrite").value = "";
                 }
-            }
+            }, false);
         }
     }
 
