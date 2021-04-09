@@ -104,14 +104,16 @@
                             <div id="pb-name">
                                 <div id="pb-inname">Elcfin</div>
                             </div>
-                            <div id="pb-content">
-                            </div>
+                            <input id="pb-title" maxlength="20" placeholder="标题（至多输入20个字符）">
+                            <input id="pb-img" placeholder="图片（输入图片地址，至多添加一张图片）">
+                            <textarea id="pb-content"></textarea>
+                            <input id="pb-tag" maxlength="20" placeholder="标签（至多添加一个标签）">
                             <div id="pb-bottom">
                                 <input type="button" value="取消" id="cancel"
                                     style="background-color:rgb(231, 231, 231); color:rgb(136, 136, 136);">
                                 <input type="button" value="预览"
                                     style="background-color:rgb(231, 231, 231); color:rgb(136, 136, 136);">
-                                <input type="button" value="发布" style="width:100px;">
+                                <input id="publishList" type="button" value="发布" style="width:100px;">
                             </div>
                         </div>
                     </div>
@@ -201,5 +203,7 @@
 <script src="JavaScript\backTop.js" type="text/javascript"></script>
 <script src="JavaScript\addList.js" type="text/javascript"></script>
 <script src="JavaScript\lazyLoad.js" type="text/javascript"></script>
+<script src="JavaScript\listPublishOut.js" type="text/javascript"></script>
+
 
 </html>

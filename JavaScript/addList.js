@@ -128,5 +128,16 @@ window.addEventListener("scroll", () => {
     let clientHeight = document.documentElement.clientHeight;
     if (scrollHeight - scrollTop == clientHeight) {
         addlist();
+
+        let likeChange = document.querySelectorAll(".likeChange");
+        likeChange[likeChange.length - 1].addEventListener("click", function () {
+            let reg = new RegExp("like.svg");
+            if (reg.test(this.src)) {
+                this.src = "Images\\index\\uC-bottomicon\\like(red).svg";
+            } else {
+                this.src = "Images\\index\\uC-bottomicon\\like.svg";
+            }
+        }, false);
+
     }
 }, false);
