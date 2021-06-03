@@ -1,0 +1,215 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <link href="../public/css/index.css" rel="stylesheet" type="text/css">
+    <title>LOFTER（乐乎）- 让兴趣，更有趣</title>
+</head>
+
+<body style="overflow-x:hidden;">
+    <!--页面宽度有限时，不出现x轴上的滚轮-->
+    <!--回到顶部的按钮-->
+    <div id="hideGrey"></div>
+    <div id="totalBody">
+        <div id="backTop">
+            <img id="backTopImg" data-src="../public/img/index-backTop.svg">
+        </div>
+        <!--topBar实现吸顶效果-->
+        <div id="topBar">
+            <div id="topBarl">
+                <div id="topBarll">
+                    <!--<a href="https://www.lofter.com/" id="logo">-->
+                    <a href="#" id="logo">
+                        <img data-src="../public/img/index-lofter.svg">
+                        <div id="lofter">LOFTER</div>
+                    </a>
+                    <div id="barIcons">
+                        <div class="barIcon">
+                            <a href="#">首页</a>
+                        </div>
+                        <div class="barIcon">
+                            <a href="Pages\DiscoveryPage.html">发现</a>
+                        </div>
+                        <div class="barIcon">
+                            <a href="#">APP</a>
+                        </div>
+                    </div>
+                    <div id="search">
+                        <input type="text" placeholder="搜索用户、标签">
+                    </div>
+                </div>
+            </div>
+            <div id="topBarr">
+                <div id="topBarrr">
+                    <div class="barIcon">
+                        <a href="#"><img data-src="../public/img/index-smallBell.svg"></a>
+                    </div>
+                    <div class="barIcon">
+                        <a href="#"><img data-src="../public/img/index-chat.svg"></a>
+                    </div>
+                    <div class="barIcon">
+                        <a href="#"><img data-src="../public/img/index-set.svg"></a>
+                    </div>
+                    <div class="barIcon">
+                        <a href="#"><img data-src="../public/img/index-more.svg"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--topBar结束-->
+        <div id="mainBody">
+            <!--mB-l中的元素实现在页面宽度有限时，左侧吸附的效果-->
+            <!--mainBody中几乎每个div都有阴影效果-->
+            <div id="mB-l">
+                <div id="publishBar">
+                    <a href="Pages\UserHomePage02.html" id="profilePhoto">
+                        <img id="profilePhotoImg" data-src="../public/img/index-dragon.jpg"></a>
+                    <div id="icons">
+                        <div class="icon">
+                            <img class="iconImg" data-src="../public/img/index-character.svg">
+                            <div class="c">文字</div>
+                        </div>
+                        <div class="icon">
+                            <img class="iconImg" data-src="../public/img/index-photo.svg">
+                            <div class="c">图片</div>
+                        </div>
+                        <div class="icon">
+                            <img class="iconImg" data-src="../public/img/index-music.svg">
+                            <div class="c">音乐</div>
+                        </div>
+                        <div class="icon">
+                            <img class="iconImg" data-src="../public/img/index-video.svg">
+                            <div class="c">视频</div>
+                        </div>
+                        <div class="icon">
+                            <img class="iconImg" data-src="../public/img/index-longArticle.svg">
+                            <div class="c">长文章</div>
+                        </div>
+                    </div>
+                </div>
+                <!--publishBar结束-->
+                <!--发布模块开始-->
+                <div id="hidePublish">
+                    <div id="profilePhotoPublisher">
+                        <a href="#">
+                            <img id="profilePhotoPublisherImg" data-src="../public/img/index-dragon.jpg">
+                        </a>
+                    </div>
+                    <div id="publishTriangle"></div>
+                    <div id="hidePublisherContentOut">
+                        <div id="hidePublishContent">
+                            <div id="pb-name">
+                                <div id="pb-inname">Elcfin</div>
+                            </div>
+                            <input id="pb-title" maxlength="20" placeholder="标题（至多输入20个字符）">
+                            <input id="pb-img" placeholder="图片（输入图片地址，至多添加一张图片）">
+                            <textarea id="pb-content"></textarea>
+                            <input id="pb-tag" maxlength="20" placeholder="标签（至多添加一个标签）">
+                            <div id="pb-bottom">
+                                <input type="button" value="取消" id="cancel"
+                                    style="background-color:rgb(231, 231, 231); color:rgb(136, 136, 136);">
+                                <input type="button" value="预览"
+                                    style="background-color:rgb(231, 231, 231); color:rgb(136, 136, 136);">
+                                <input id="publishList" type="button" value="发布" style="width:100px;">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--发布模块结束-->
+            </div>
+            <!--mB-l结束-->
+            <div id="mB-side">
+                <div id="mBsideMain">
+                    <div id="menu">
+                        <div id="aboutMe" class="side">
+                            <div id="aM-top">
+                                <a href="Pages\UserHomePage02.html" id="aM-topl">
+                                    <div id="aMt-c">
+                                        <strong>Elcfin</strong><br />
+                                        miaowu
+                                    </div>
+                                </a>
+                                <a href="#" id="aM-topr">
+                                    <img data-src="../public/img/index-triangle.svg"></a>
+                            </div>
+                            <div id="aM-bottom">
+                                <a href="#" id="aM-bottomFocus">
+                                    <div class="character">关注</div>
+                                    <div class="number">78</div>
+                                </a>
+                                <a href="#" id="aM-bottomFans">
+                                    <div class="character">粉丝</div>
+                                    <div class="number">2</div>
+                                </a>
+                            </div>
+                        </div>
+                        <div id="info" class="side">
+                            <div id="info-top">
+                                <a href="#" id="originatorCenter">
+                                    <div id="originatorCenterc">创作者中心</div>
+                                    <img data-src="../public/img/index-rightArrow.svg">
+                                </a>
+                                <a href="#" class="infoClassify">
+                                    <img data-src="../public/img/index-article.svg">
+                                    <div class="infoClassifyc">文章</div>
+                                </a>
+                                <a href="#" class="infoClassify">
+                                    <img data-src="../public/img/index-collection.svg">
+                                    <div class="infoClassifyc">合集</div>
+                                </a>
+                                <a href="#" class="infoClassify">
+                                    <img data-src="../public/img/index-darklike.svg">
+                                    <div class="infoClassifyc">喜欢</div>
+                                </a>
+                                <a href="#" class="infoClassify">
+                                    <img data-src="../public/img/index-walletPurse.svg">
+                                    <div class="infoClassifyc">钱包</div>
+                                </a>
+                                <a href="#" class="infoClassify">
+                                    <img data-src="../public/img/index-draft.svg">
+                                    <div class="infoClassifyc">草稿</div>
+                                </a>
+                            </div>
+                            <div id="info-bottom">
+                                <a href="#" class="infoSet">
+                                    <img data-src="../public/img/index-wrench.svg">
+                                    <div class="infoSetc">
+                                        个人主页设置
+                                    </div>
+                                </a>
+                                <a href="#" class="infoSet">
+                                    <img data-src="../public/img/index-management.svg">
+                                    <div class="infoSetc">
+                                        批量管理文章</div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="plan" class="side"></div>
+                    <img data-src="../public/img/index-origin.jpg" id="origin" class="side">
+                    <!--当y方向滚动条滚至右侧无内容时，menu出现并保持吸顶-->
+                </div>
+            </div>
+        </div>
+        <div id="bodyFooter">
+            <p>联系我 | Elcfin | lofter复刻 | 华中科技大学 | 冰岩实习任务</p>
+        </div>
+    </div>
+</body>
+
+<script type="module" src="../public/js/throttle.js"></script>
+<script type="module" src="../public/js/indexData.js"></script>
+<script type="module" src="../public/js/menuAppear.js"></script>
+<script type="module" src="../public/js/backToTop.js"></script>
+<script type="module" src="../public/js/addNewList.js"></script>
+<script type="module" src="../public/js/addList.js"></script>
+<script type="module" src="../public/js/commentsIsVisible.js"></script>
+<script type="module" src="../public/js/lazyLoad.js"></script>
+<script type="module" src="../public/js/listPublishOut.js"></script>
+<script type="module" src="../public/js/imgSizeChange.js"></script>
+<script type="module" src="../public/js/publish.js"></script>
+<script type="module" src="../public/js/commentPublishOut.js"></script>
+<script type="module" src="../public/js/likeChange.js"></script>
+
+</html>

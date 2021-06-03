@@ -1,0 +1,7 @@
+{
+  "name": "try-lofter",
+  "version": "0.0.0",
+  "dependencies": {
+    "jsdom": "^16.6.0"
+  }
+}
